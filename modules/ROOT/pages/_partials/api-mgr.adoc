@@ -47,33 +47,33 @@
 > api-mgr:alert:add <apiInstanceId> <name> [flags]
 ----
 
-This command creates an API instance alert with the name passed in `name` for the API instance Id passed in `<apiInstanceId>`.
+Creates an API instance alert with the name passed in `name` for the API instance ID passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
-| `--duration <num>` | Condition occurrence period duration.
-| `--durationUnit <value>` | Condition occurrence period duration unit. +
-Supported values: `days`, `hours`, and `minutes`.
-| `--email <emailAddress>` | Email to send alert notification to. +
-Pass this flag multiple times to specify multiple emails.
-| `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert.
-| `--operator <value>` | Condition operator that explains values in relation to threshold. +
-Supported values: `gt`, `lt`, `eq`.
-| `--periods <num>` | Number of consecutive periods condition should occur for.
-| `--policyId <num>` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type.
-| `--recipient <username>` | Username to send alert notification to. +
-Pass this flag multiple times to specify multiple usernames.
-| `--responseCode <code>` | Response codes to trigger `response-code` alert type. +
-Pass this flag multiple times to specify multiple codes.
-| `--responseTime <num>` | Response time to trigger `response-time` alert type.
-| `--severity <value>` | Alert severity. +
-Supported values: `Info`, `Warning`, `Critical`.
-| `--threshold <num>` | Condition occurrences threshold number.
-| `--type <value>` | Alert type/condition. +
-Supported values: `request-count`, `response-code`, `policy-violation`, `response-time`
+|Flag |Description | Example
+| `--duration` | Condition occurrence period duration. | `--duration 60`
+| `--durationUnit` | Condition occurrence period duration unit. +
+Supported values: `days`, `hours`, and `minutes`. | `--durationUnit minutes`
+| `--email` | Email to send alert notification to. +
+Pass this flag multiple times to specify multiple emails. | `--email example@mulesoft.com`
+| `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert. | `--enabled`
+| `--operator` | Condition operator that explains values in relation to threshold. +
+Supported values: `gt`, `lt`, `eq`. | `--operator gt`
+| `--periods` | Number of consecutive periods condition should occur for. | `--periods 34`
+| `--policyId` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type. | `--policyId 00`
+| `--recipient` | Username to send alert notification to. +
+Pass this flag multiple times to specify multiple usernames. | `--recipient mulesoftuser`
+| `--responseCode` | Response codes to trigger `response-code` alert type. +
+Pass this flag multiple times to specify multiple codes. | `--responseCode 400`
+| `--responseTime` | Response time to trigger `response-time` alert type. | `--responseTime 60`
+| `--severity` | Alert severity. +
+Supported values: `Info`, `Warning`, `Critical`. | `--severity Critical`
+| `--threshold` | Condition occurrences threshold number. | `--threshold 3`
+| `--type` | Alert type/condition. +
+Supported values: `request-count`, `response-code`, `policy-violation`, `response-time` | `--type response-code`
 |===
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
@@ -87,16 +87,17 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description 
-|`--limit <value>` | Number of results to retrieve, default is 10 results
-| `--offset <value>` | Offsets the amount of APIs passed, for example, `--offset 3`
-| `--output <value>`| Specifies the response format + 
-Supported values are `table` (default) and `json`
-| `--sort` | Sorts the results in the field name passed, for example, `--sort "Latest Version"`
+|Flag |Description | Example 
+|`--limit` | Number of results to retrieve, default is 10 results | `--limit 5`
+| `--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--output`| Specifies the response format + 
+Supported values are `table` (default) and `json` | `--output json`
+| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |===
 
 [[api-mgr-api-autodiscovery]]
@@ -108,15 +109,15 @@ Supported values are `table` (default) and `json`
 
 This command lists the autodiscovery properties required for a gateway to track the API Instance Id passed in `<apiInstanceId>`.
 
-Besides the `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description 
-|`--gatewayVersion` | Specifies the gateway version to download + 
-For example: `api-mgr:api:autodiscovery --gatewayVersion: 4.0.1  643404 /tmp/`
-| `--output <value>`| Specifies the response format + 
-Supported values are `table` (default) and `json`
+|Flag |Description |Example
+|`--gatewayVersion` | Specifies the gateway version to download | `--gatewayVersion 4.0.1  643404 /tmp/``
+| `--output`| Specifies the response format + 
+Supported values are `table` (default) and `json` | `--output table`
 |===
 
 [[api-mgr-api-change-specification]]
@@ -128,7 +129,7 @@ Supported values are `table` (default) and `json`
 
 Changes the asset version for the API instance passed in `<apiInstanceId>` by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
@@ -139,7 +140,7 @@ This command accepts only the default `--help`, general, and authentication flag
 
 Classifies the API instance passed in `<apiInstanceId>` in the environment passed in `<destEnvName>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
@@ -148,9 +149,9 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:api:delete [flags] <apiInstanceId>
 ----
 
-This command deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting.
+Deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
@@ -159,26 +160,26 @@ This command accepts only the default `--help`, general, and authentication flag
 > api-mgr:api:deploy [flags] <apiInstanceId>
 ----
 
-This command deploys the API instance passed in '<apiInstanceId>' to the deployment target specified using the flags described below. Deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
+Deploys the API instance passed in '<apiInstanceId>' to the deployment target specified using the flags described below. Deploy any undeployed API using this command regardless of if it was created using the API Manager CLI or API Manger UI.
 
 [NOTE]
 This command is only supported for endpoints with proxy.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description | Example
 
-| `--applicationName <name>`
+| `--applicationName`
 | Application name
 | `--applicationName myMuleApp 643404`
 
-| `--environmentName <name>`
+| `--environmentName`
 | Target environment name, only for when deploying API instances from unclassified environments
 | `--environmentName TestEnv 643404`
 
-| `--gatewayVersion <version>`
+| `--gatewayVersion`
 | The CloudHub Gateway version
 | `--gatewayVersion: 9.9.9.9  643404`
 
@@ -186,7 +187,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 | Update application if it exists +
 | `--overwrite:  643404`
 
-| `--target <id>`
+| `--target`
 | Hybrid or RTF deployment target ID +
 | `--target 1598794 643404`
 
@@ -201,7 +202,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
@@ -212,7 +213,7 @@ This command accepts only the default `--help`, general, and authentication flag
 
 Shows details of the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
@@ -223,7 +224,7 @@ Besides the default `--help`, general, and authentication flags, this command ha
 
 This command downloads the API proxy ZIP file of the API instance passed in `<apiInstanceId>` to a local directory specified in `<targetPath>`. You cannot download the API proxy of a Flex Gateway API instance.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts a `gatewayVersion` flag to specify the gateway version to download.
+In addition to the default flag `--help`, this command accepts the `--gatewayVersion` flag to specify the gateway version to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
 [[api-mgr-api-edit]]
@@ -235,7 +236,7 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 
 This command edits the API instance passed in `<apiInstanceId>`. Editing a deployed Flex Gateway API instance redeploys the instance.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -323,7 +324,8 @@ Supported values are `http`, or `https`.
 
 Lists all APIs in API Manager 2.x.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
+
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -354,7 +356,8 @@ Flex Gateway API instances created with Anypoint CLI do not support multiple ups
 * xref:gateway::flex-local-publish-api-multiple-services.adoc[Add an API in Local Mode].
 ====
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
+
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -440,7 +443,8 @@ Supported values are `http` or `https`.
 
 Promotes the API instance passed in `<apiInstanceId>` from the source environment in `<sourceEnvId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
+
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -468,7 +472,8 @@ Include the flag to enable it.
 
 Redeploys the API instance passed in `<apiInstanceId>` to the deployment target set up in the flags described below.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
+
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -501,7 +506,7 @@ Include the flag to enable it
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -512,7 +517,7 @@ This command accepts only the default `--help`, general, and authentication flag
 
 This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
@@ -526,7 +531,7 @@ Lists all contracts of the API passed in `<apiInstanceId>`.
 [TIP]
 You can specify keywords in searchText to limit results of APIs containing those specific keywords.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -545,7 +550,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 Applies the policy passed in `<policyId>` to the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -593,7 +598,7 @@ The following example defines a rate limit of one request every ten seconds:
 
 This command shows the description and available base configuration properties of the policy name passed in `<policyId>`. +
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -619,7 +624,7 @@ Supported values are `table` (default) and `json`
 
 This command disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
@@ -630,7 +635,7 @@ This command accepts only the default flag `--help`, general, and authentication
 
 This command edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -653,7 +658,7 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTempl
 
 This command enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
@@ -665,7 +670,7 @@ This command accepts only the default flag `--help`, general, and authentication
 This command lists all policies for all APIs in API Manager 2.x. +
 When the `[apiInstanceId]` flag is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts the `-m, --muleVersion4OrAbove` flag. +
+In addition to the default flag `--help`, this command accepts the `-m, --muleVersion4OrAbove` flag. 
 
 [[api-mgr-policy-remove]]
 == api-mgr:policy:remove
@@ -676,7 +681,7 @@ Besides the default `--help`, general, and authentication flags, this command al
 
 This command removes the policy specified in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default flag `--help`, general, and authentication flags.
+This command accepts the default flag `--help`.
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
@@ -687,7 +692,7 @@ This command accepts only the default flag `--help`, general, and authentication
 
 This command creates an SLA tier for the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -734,7 +739,7 @@ For example: `-l true,100,sec -l false,20,min`.
 
 This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default `--help`.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
@@ -745,7 +750,7 @@ This command accepts only the default `--help`, general, and authentication flag
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts only the default `--help`, general, and authentication flags.
+This command accepts the default `--help`.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
@@ -755,7 +760,7 @@ This command accepts only the default `--help`, general, and authentication flag
 
 This command lists the SLA tiers of the API instance passed in `<apiInstanceId>`.
 
-Besides the default `--help`, general, and authentication flags, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
