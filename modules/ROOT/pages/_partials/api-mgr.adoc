@@ -63,7 +63,7 @@ Pass this flag multiple times to specify multiple emails. | `--email example@mul
 | `--operator` | Condition operator that explains values in relation to threshold. +
 Supported values: `gt`, `lt`, `eq`. | `--operator gt`
 | `--periods` | Number of consecutive periods condition should occur for. | `--periods 34`
-| `--policyId` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type. | `--policyId 00`
+| `--policyId` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type. | `--policyId http-basic-authentication`
 | `--recipient` | Username to send alert notification to. +
 Pass this flag multiple times to specify multiple usernames. | `--recipient mulesoftuser`
 | `--responseCode` | Response codes to trigger `response-code` alert type. +
@@ -88,7 +88,6 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 Lists alerts for the API instance passed in `<apiInstanceId>`.
 
 In addition to the default flag `--help`, this command accepts the following flags:
-
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -185,7 +184,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 
 | `--overwrite`
 | Update application if it exists +
-| `--overwrite:  643404`
+| `--overwrite  643404`
 
 | `--target`
 | Hybrid or RTF deployment target ID +
@@ -234,84 +233,86 @@ For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
 > api-mgr:api:edit [flag] <apiInstanceId>
 ----
 
-This command edits the API instance passed in `<apiInstanceId>`. Editing a deployed Flex Gateway API instance redeploys the instance.
+Edits the API instance passed in `<apiInstanceId>`. Editing a deployed Flex Gateway API instance redeploys the instance.
 
 In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
+|Flag |Description |Example
 | `-f, --isFlex`
 | Indicates whether this is a Flex Gateway API instance. +
-Include the flag to enable it.
+Include the flag to enable it | `--isFlex`
 
 | `-m, --muleVersion4OrAbove`
 | Indicates whether this is a Mule 4 API instance. +
-Include the flag to enable it.
+Include the flag to enable it | `--muleVersionOrAbove`
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-Include the flag to enable it.
+Include the flag to enable it | `--withProxy`
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-Include the flag to enable it.
+Include the flag to enable it | `--referencesUserDomain`
 
-| `--apiInstanceLabel <value>`
-| API instance label, optional.
+| `--apiInstanceLabel `
+| API instance label | `--apiInstanceLabel exampleLabel`
 
-| `--deploymentType <option>`
-| Deployment type. +
-Supported options are `cloudhub`, `hybrid`, or `rtf`.
+| `--deploymentType`
+| Deployment type +
+Options: `cloudhub`, `hybrid`, `rtf` (required) | `--deploymentType cloudhub`   
 
-| `--endpointUri <value>`
-| Consumer endpoint URI.
+| `--endpointUri`
+| Consumer endpoint URI (required) | `--endpointUri /udp://localhost:65432`
 
-| `--inboundSecretGroupId <value>` 
-| Inbound secret group ID.
+| `--inboundSecretGroupId` 
+| Inbound secret group ID  | `--inboundSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
-| `--inboundTlsContextId <value>` 
+| `--inboundTlsContextId` 
+| Outbound TLS Context ID +
+Supply the `--inboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`. |  `--inboundTlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+
+| `--outboundSecretGroupId`
+| Outbound secret group ID. | `--outboundSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+
+| `--outboundTlsContextId `
 | Outbound TLS Context ID. +
-Supply the `--inboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
-To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`.
+Supply the `--outboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`. | `--outboundTlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
-| `--outboundSecretGroupId <value>`
-| Outbound secret group ID. 
+| `--path`
+| Proxy path (required)| `--path /http://localhost:3000`
 
-| `--outboundTlsContextId <value>`
-| Outbound TLS Context ID. +
-Supply the `--outboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`.
+| `--port`
+| Proxy port (required) | `--port 8080`
 
-| `--path <value>`
-| Proxy path.
+| `--providerId`
+| Client Identity Provider Id that the API is associated with +
+Default is Anypoint Platform Client Provider | `--providerId 1787c36ab544466698e380131040faad`
 
-| `--port <value>`
-| Proxy port.
+| `--responseTimeout`
+| Maximum response timeout(required) | `--responseTimeout 10`
 
-| `--providerId <value>`
-| Optional Client Identity Provider Id that the API is associated with. Default is Anypoint Platform Client Provider.
+| `--scheme`
+| Proxy scheme (required) +
+Supported values: `http`, `https`. | `--scheme http`
 
-| `--responseTimeout <value>`
-| Maximum response timeout.
+| `--serviceName`
+| WSDL service name +
+Flex Gateway does not support this flag | `--serviceName ExampleServerName`
 
-| `--scheme <value>`
-| Proxy scheme. +
-Supported values are `http`, or `https`.
+| `--serviceNamespace`
+| WSDL service namespace. Flex Gateway does not support this flag. |`--serviceNamespace exampleServiceName`
 
-| `--serviceName <value>`
-| WSDL service name. Flex Gateway does not support this flag.
-
-| `--serviceNamespace <value>`
-| WSDL service namespace. Flex Gateway does not support this flag.
-
-| `--servicePort <value>`
-| WSDL service port. Flex Gateway does not support this flag.
+| `--servicePort`
+| WSDL service port +
+ Flex Gateway does not support this flag | `--servicePort 443`
 
 | `--updateApisInSamePort`
-| Updates the TLS context of API instances sharing the port of this API.
+| Updates the TLS context of API instances sharing the port of this API. | `--updateApisInSamePort`
 
-| `--uri <value>`
-| Implementation URI.
+| `--uri`
+| Implementation URI. | `--uri /udp://localhost:65432`
 
 |===
 
@@ -326,17 +327,15 @@ Lists all APIs in API Manager 2.x.
 
 In addition to the default flag `--help`, this command accepts the following flags:
 
-
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
-| `--apiVersion <value>`    | API version that filters results
-| `--assetId <value>`       | Asset ID that filters results
-| `--instanceLabel <value>` | API instance label that filters results
-| `--limit <num>`           | Number of results to retrieve
-| `--offset <value>` | Offsets the amount of APIs passed
-
-| `--sort` | Sorts the results in the field name passed
+|Flag |Description |Example
+| `--apiVersion`    | API version that filters results | `--apiVersion 1.0.2`
+| `--assetId`       | Asset ID that filters results | `--assetId ([group_id]/)<asset_id>/<version>`
+| `--instanceLabel` | API instance label that filters results |`--instanceLabel exampleLabel`
+| `--limit`           | Number of results to retrieve | `--limit 50` 
+| `--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"` 
 |===
 
 [[api-mgr-api-manage]]
@@ -359,78 +358,83 @@ Flex Gateway API instances created with Anypoint CLI do not support multiple ups
 In addition to the default flag `--help`, this command accepts the following flags:
 
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
-
+|Flag |Description |Example
 | `-f, --isFlex`
 | Indicates whether this is a Flex Gateway API instance. +
-Include the flag to enable it. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
+Include the flag to enable it | `--isFlex`
 
 | `-m, --muleVersion4OrAbove`
-| Indicates whether this API instance is being managed in Mule 4 or above. +
-Include the flag to enable it.
+| Indicates whether this is a Mule 4 API instance. +
+Include the flag to enable it | `--muleVersionOrAbove`
 
 | `-p, --withProxy`
 | Indicates whether the endpoint should use a proxy. +
-Include the flag to enable it.
+Include the flag to enable it | `--withProxy`
 
 | `-r, --referencesUserDomain`
 | Indicates whether a proxy should reference a user domain. +
-Include the flag to enable it.
+Include the flag to enable it | `--referencesUserDomain`
 
-| `--apiInstanceLabel <value>`
-| API instance label, optional.
+| `--apiInstanceLabel `
+| API instance label | `--apiInstanceLabel exampleLabel`
 
-| `--deploymentType <option>`
-| Deployment type. +
-Supported values are `cloudhub`, `hybrid`, or `rtf`. When deploying a Flex Gateway API instance, the command assumes the `--deploymentType` option is `hybrid`.
+| `--deploymentType`
+| Deployment type +
+Options: `cloudhub`, `hybrid`, `rtf` (required) | `--deploymentType hybrid`   
 
-| `--endpointUri <value>`
-| Consumer endpoint URI.
+| `--endpointUri`
+| Consumer endpoint URI (required) | `--endpointUri /udp://localhost:65432`
 
-| `--inboundSecretGroupId <value>` 
-| Inbound secret group ID.
+| `--inboundSecretGroupId` 
+| Inbound secret group ID  | `--inboundSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
-| `--inboundTlsContextId <value>` 
+| `--inboundTlsContextId` 
+| Outbound TLS Context ID +
+Supply the `--inboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--inboundTlsContextId "null"`. |  `--inboundTlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+
+| `--outboundSecretGroupId`
+| Outbound secret group ID. | `--outboundSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+
+| `--outboundTlsContextId `
 | Outbound TLS Context ID. +
-Supply the `--inboundSecretGroupId` of the TLS Context's secret group.
+Supply the `--outboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`. | `--outboundTlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
-| `--outboundSecretGroupId <value>`
-| Outbound secret group ID.
+| `--path`
+| Proxy path (required)| `--path /http://localhost:3000`
 
-| `--outboundTlsContextId <value>`
-| Outbound TLS Context ID. +
-Supply the `--outboundSecretGroupId` of the TLS Context's secret group.
+| `--port`
+| Proxy port (required) | `--port 8080`
 
-| `--path <value>`
-| Proxy path.
+| `--providerId`
+| Client Identity Provider Id that the API is associated with +
+Default is Anypoint Platform Client Provider | `--providerId 1787c36ab544466698e380131040faad`
 
-| `--port <value>`
-| Proxy port.
+| `--responseTimeout`
+| Maximum response timeout(required) | `--responseTimeout 10`
 
-| `--providerId <value>`
-| Optional Client Identity Provider Id in which the API is associated with. Default is Anypoint Platform Client Provider.
+| `--scheme`
+| Proxy scheme (required) +
+Supported values: `http`, `https`. | `--scheme http`
 
-| `--responseTimeout <value>`
-| Response timeout.
+| `--serviceName`
+| WSDL service name +
+Flex Gateway does not support this flag | `--serviceName ExampleServerName`
 
-| `--scheme <value>`
-| Proxy scheme. +
-Supported values are `http` or `https`.
+| `--serviceNamespace`
+| WSDL service namespace. Flex Gateway does not support this flag. |`--serviceNamespace exampleServiceName`
 
-| `--serviceName <value>`
-| WSDL service name. Flex Gateway does not support this flag.
+| `--servicePort`
+| WSDL service port +
+ Flex Gateway does not support this flag | `--servicePort 443`
 
-| `--serviceNamespace <value>`
-| WSDL service namespace. Flex Gateway does not support this flag.
+| `--type`
+| Endpoint type +
+Supported options: `http`, `raml`, `wsdl` | `--type http`
 
-| `--servicePort <value>`
-| WSDL service port. Flex Gateway does not support this flag.
-
-| `--type <option>` | Endpoint type. Supported options are `http`, `raml`, and `wsdl`.
-| `--uri <value>`
-| Implementation URI.
+| `--uri`
+| Implementation URI. | `--uri /udp://localhost:65432`
 
 |===
 
@@ -446,21 +450,21 @@ Promotes the API instance passed in `<apiInstanceId>` from the source environmen
 In addition to the default flag `--help`, this command accepts the following flags:
 
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
+|Flag |Description| Example
 | `-a, --copyAlerts`
-| Indicates whether to copy alerts. +
-Include the flag to enable it.
+| Indicates whether to copy alerts +
+Include the flag to enable it | `--copyAlerts`
 
 | `-p, --copyPolicies`
-|Indicates whether to copy policies. +
-Include the flag to enable it.
+|Indicates whether to copy policies +
+Include the flag to enable it | `--copyPolicies`
 
 | `-t, --copyTiers`
-|Indicates whether to copy tiers. +
-Include the flag to enable it.
-| `-providerId` | Indicates the provider's ID associated with the API.
+|Indicates whether to copy tiers +
+Include the flag to enable it | `--copyTiers`
+| `--providerId` | Indicates the provider's ID associated with the API. | `--providerId 1787c36ab544466698e380131040faad`
 |===
 
 [[api-mgr-api-redeploy]]
@@ -475,25 +479,25 @@ Redeploys the API instance passed in `<apiInstanceId>` to the deployment target 
 In addition to the default flag `--help`, this command accepts the following flags:
 
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
-| `--applicationName <name>`
-| Application name
+|Flag |Description| Example
+| `--applicationName`
+| Application name | `--applicationName Muleapp 643404`
 
-| `--environmentName <name>`
+| `--environmentName`
 | Target environment name +
-Include to redeploy APIs from unclassified environments
+Include to redeploy APIs from unclassified environments | `--environmentName mulesoftEnvironment 643404`
 
-| `--gatewayVersion <version>`
-| CloudHub Gateway version
+| `--gatewayVersion`
+| CloudHub Gateway version | `--gatewayVersion 9.9.9 643404`
 
 | `--overwrite`
 | Update application if exists +
-Include the flag to enable it
+Include the flag to enable it | `--overwrite`
 
-| `--target <id>`
-| Hybrid or RTF deployment target ID
+| `--target`
+| Hybrid or RTF deployment target ID | `--target 1598794 643404`
 
 |===
 
@@ -552,27 +556,26 @@ Applies the policy passed in `<policyId>` to the API instance passed in `<apiIns
 
 In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
-| `-c, --config [configJSON]`
-| Pass the configuration data as a JSON string. +
-For example, `api-mgr:policy:apply -c '{"property": "value"}'`.
+|Flag |Description| Example
+| `-c, --config` 
+| Pass the configuration data as a JSON string |
+`--config '{\"username\":\"user\",\"password\":\"teste\"}'
 
-| `--configFile [file]`
-| Pass the configuration data as a file. +
-For example, `api-mgr policy apply --configFile ./config.json`.
+| `--configFile`
+| Pass the configuration data as a file |
+`--configFile ./config.json`
 
-| `--groupId <value>`
-| Mule 4 policy group ID. +
-If no value is provided, this value defaults to MuleSoft group ID.
+| `--groupId`
+| Mule 4 policy group ID +
+If no value is provided, this value defaults to MuleSoft group ID | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
 | `-p, --pointcut [dataJSON]`
-| Pass pointcut data as JSON strings. +
-For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`.
-
-| `--policyVersion <value>`
-| Mule 4 policy version.
+| Pass pointcut data as JSON strings |
+`--pointcut '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+| `--policyVersion`
+| Mule 4 policy version. | `--policyVersion 1.0.2`
 
 |===
 
@@ -596,22 +599,22 @@ The following example defines a rate limit of one request every ten seconds:
 > api-mgr:policy:describe [flags] <policyId>
 ----
 
-This command shows the description and available base configuration properties of the policy name passed in `<policyId>`. +
+Shows the description and available base configuration properties of the policy name passed in `<policyId>`. +
 
 In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
+|Flag |Description| Example
 
 
-| `--groupId <value>`
-| Mule 4 policy group ID +
-Defaults to the MuleSoft group ID when a value is not provided
-| `--policyVersion <value>`
-| Mule 4 policy version
-| `--output <value>` | Specifies the response format + 
-Supported values are `table` (default) and `json`
+| `--groupId`
+| Mule 4 policy group ID 
+Defaults to the MuleSoft group ID when a value is not provided | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--policyVersion`
+| Mule 4 policy version | `--policyVersion 1.0.2`
+| `--output` | Specifies the response format +
+Supported values are `table` (default) and `json` | `--output json`
 
 |===
 
@@ -622,7 +625,7 @@ Supported values are `table` (default) and `json`
 > api-mgr:policy:disable [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
+Disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
 This command accepts the default flag `--help`.
 
@@ -633,20 +636,19 @@ This command accepts the default flag `--help`.
 > api-mgr:policy:edit [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
+Edits the policy configuration passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
 In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
-| `-c, --config [configJSON`]
-| Pass the configuration data as a JSON string +
-For example, `api-mgr:policy:apply -c '{"property": "value"}'`
-
-| `-p, --pointcut [dataJSON]`
-| Pass pointcut data as JSON strings +
-For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
+|Flag |Description| Example
+| `-c, --config
+| Pass the configuration data as a JSON string |
+--config '{\"username\":\"user\",\"password\":\"teste\"}'`
+| `-p, --pointcut`
+| Pass pointcut data as JSON strings |
+`-p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
 |===
 
 [[api-mgr-policy-enable]]
@@ -656,7 +658,7 @@ For example `api-mgr:policy:apply (...) -p '[{"methodRegex":"GET\|PUT","uriTempl
 > api-mgr:policy:enable [flags] <apiInstanceId> <policyInstanceId>
 ----
 
-This command enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
+Enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
 This command accepts the default flag `--help`.
 
@@ -667,8 +669,8 @@ This command accepts the default flag `--help`.
 > api-mgr:policy:list [flags] [apiInstanceId]
 ----
 
-This command lists all policies for all APIs in API Manager 2.x. +
-When the `[apiInstanceId]` flag is specified, this command lists the policies applied to that API instance. Not specifying the `[apiInstanceId]` will list all policies for all APIs.
+Lists all policies for all APIs in API Manager 2.x. +
+When the `--apiInstanceId` flag is specified, this command lists the policies applied to that API instance. Not specifying the `--apiInstanceId` will list all policies for all APIs.
 
 In addition to the default flag `--help`, this command accepts the `-m, --muleVersion4OrAbove` flag. 
 
@@ -694,20 +696,20 @@ This command creates an SLA tier for the API instance passed in `<apiInstanceId>
 
 In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header%autowidth.spread,cols="a,a"]
+[%header%autowidth.spread,cols="a,a,a"]
 |===
-|Flag |Description
+|Flag |Description| Example
 | `-a, --autoApprove`
-| Indicates whether the SAL tier should be auto-approved. +
-Include the flag to enable it.
+| Indicates whether the SAL tier should be auto-approved +
+Include the flag to enable it | `--autoApprove`
 
-| `--name <value>`
-| Tier name.
+| `--name`
+| Tier name. |`--name muleSLAtier`
 
-| `--description <value>`
-| Tier description.
+| `--description`
+| Tier description. | `--description tier example description`
 
-| `-l, --limit <value>`
+| `-l, --limit`
 |Single instance of an SLA tier limit in the form `--limit A,B,C` where:
 
 * `A` is a boolean indicating whether this limit is visible to the user.
@@ -722,11 +724,11 @@ Include the flag to enable it.
 ** `mo`(month)
 ** `yr`(year)
 
-For example: `--limit true,100,min` is a visible limit of 100 requests per minute. +
-
+| `--limit true,100,min` +
 [TIP]
 To create multiple limits, you can provide multiple `--limit` options. +
 For example: `-l true,100,sec -l false,20,min`.
+
 
 |===
 
@@ -737,7 +739,7 @@ For example: `-l true,100,sec -l false,20,min`.
 > api-mgr:tier:copy [flags] <sourceAPIInstanceId> <targetAPIInstanceId>
 ----
 
-This command copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
+Copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
 This command accepts the default `--help`.
 
