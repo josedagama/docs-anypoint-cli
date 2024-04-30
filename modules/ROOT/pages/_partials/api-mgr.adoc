@@ -708,7 +708,7 @@ Include the flag to enable it | `--autoApprove`
 | Tier name |`--name muleSLAtier`
 
 | `--description`
-| Tier description. | `--description tier example description`
+| Tier description | `--description tier example description`
 
 | `-l, --limit`
 |Single instance of an SLA tier limit in the form `--limit A,B,C` where:
