@@ -671,7 +671,7 @@ This command accepts the default flag `--help`.
 ----
 
 Lists all policies for all APIs in API Manager 2.x. +
-When the `--apiInstanceId` flag is specified, this command lists the policies applied to that API instance. Not specifying the `--apiInstanceId` will list all policies for all APIs.
+Specify the `--apiInstanceId` flag to list the policies applied to that API instance. Without the `--apiInstanceId` flag, the command lists all policies for all APIs.
 
 In addition to the default flag `--help`, this command accepts the `-m, --muleVersion4OrAbove` flag. 
 
