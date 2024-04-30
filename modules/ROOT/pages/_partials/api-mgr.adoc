@@ -705,7 +705,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 Include the flag to enable it | `--autoApprove`
 
 | `--name`
-| Tier name. |`--name muleSLAtier`
+| Tier name |`--name muleSLAtier`
 
 | `--description`
 | Tier description. | `--description tier example description`
