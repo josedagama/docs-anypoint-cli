@@ -569,7 +569,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 
 | `--groupId`
 | Mule 4 policy group ID +
-If no value is provided, this value defaults to MuleSoft group ID | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+This value defaults to the MuleSoft group ID. | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings |
