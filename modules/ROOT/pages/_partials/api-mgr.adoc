@@ -114,7 +114,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description |Example
-|`--gatewayVersion` | Specifies the gateway version to download | `--gatewayVersion 4.0.1  643404 /tmp/``
+|`--gatewayVersion` | Specifies the gateway version to download | `--gatewayVersion 4.0.1  643404 /tmp/`
 | `--output`| Specifies the response format + 
 Supported values are `table` (default) and `json` | `--output table`
 |===
