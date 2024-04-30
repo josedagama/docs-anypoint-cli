@@ -615,7 +615,7 @@ Defaults to the MuleSoft group ID. | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0
 | `--policyVersion`
 | Mule 4 policy version | `--policyVersion 1.0.2`
 | `--output` | Specifies the response format +
-Supported values are `table` (default) and `json` | `--output json`
+Supported values are `table` (default) and `json`. | `--output json`
 
 |===
 
