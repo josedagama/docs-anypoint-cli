@@ -148,7 +148,7 @@ This command accepts the default flag `--help`.
 > api-mgr:api:delete [flags] <apiInstanceId>
 ----
 
-Deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting.
+Deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting it.
 
 This command accepts the default flag `--help`.
 
