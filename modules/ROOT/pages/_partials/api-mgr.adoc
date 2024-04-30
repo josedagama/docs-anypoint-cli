@@ -610,7 +610,8 @@ In addition to the default flag `--help`, this command accepts the following fla
 
 | `--groupId`
 | Mule 4 policy group ID 
-Defaults to the MuleSoft group ID when a value is not provided | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
++
+Defaults to the MuleSoft group ID. | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 | `--policyVersion`
 | Mule 4 policy version | `--policyVersion 1.0.2`
 | `--output` | Specifies the response format +
