@@ -434,7 +434,7 @@ Flex Gateway does not support this flag | `--serviceName ExampleServerName`
 Supported options: `http`, `raml`, `wsdl` | `--type http`
 
 | `--uri`
-| Implementation URI. | `--uri /udp://localhost:65432`
+| Implementation URI | `--uri /udp://localhost:65432`
 
 |===
 
