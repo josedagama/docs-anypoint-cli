@@ -561,7 +561,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 |Flag |Description| Example
 | `-c, --config` 
 | Pass the configuration data as a JSON string |
-`--config '{\"username\":\"user\",\"password\":\"teste\"}'
+`--config '{\"username\":\"user\",\"password\":\"teste\"}'`
 
 | `--configFile`
 | Pass the configuration data as a file |
