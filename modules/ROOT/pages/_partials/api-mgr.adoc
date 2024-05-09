@@ -592,6 +592,8 @@ The following example defines a rate limit of one request every ten seconds:
     }
 ----
 
+NOTE: Even if you plan to use the default values, you must configure all required policy parameters when applying a policy with Anypoint CLI, 
+
 [[api-mgr-policy-describe]]
 == api-mgr:policy:describe
 
