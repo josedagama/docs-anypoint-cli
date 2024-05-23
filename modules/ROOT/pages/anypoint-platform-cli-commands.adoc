@@ -336,7 +336,7 @@ In order for the Anypoint Platform CLI to recognize your target servers, each se
 |===
 
 
-[[rtf--apps]]
+[[rtf-apps]]
 == Runtime Fabric Application Management 
 
 [%header,cols="35a,65a"]
