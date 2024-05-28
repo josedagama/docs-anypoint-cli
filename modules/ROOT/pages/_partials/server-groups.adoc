@@ -5,18 +5,29 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
+|xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-add-server[runtime-mgr:serverGroup:add:server] | Adds server to a server group
 |xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-create[runtime-mgr:serverGroup:create] | Creates server group from servers
 |xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-describe[runtime-mgr:serverGroup:describe] | Describes server group
-|xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-modify[runtime-mgr:serverGroup:modify] | Modifies server group
-|xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-add-server[runtime-mgr:serverGroup:add:server] | Adds server to a server group
 |xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-delete[runtime-mgr:serverGroup:delete] | Deletes server group
 |xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-list[runtime-mgr:serverGroup:list] | Lists all server groups in the environment
+|xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-modify[runtime-mgr:serverGroup:modify] | Modifies server group
 |xref:anypoint-cli::server-groups.adoc#runtime-mgr-servergroup-remove-server[runtime-mgr:serverGroup:remove:server] | Removes server from a server group
 |===
 
 // end::summary[]
 
 // tag::commands[]
+
+[[runtime-mgr-servergroup-add-server]]
+== runtime-mgr:serverGroup:add:server
+
+----
+> runtime-mgr:serverGroup:add:server [flags] <serverGroupId> <serverId>
+----
+
+Adds the server passed in `serverId` to the server group passed in `serverGroupId`.
+
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-servergroup-create]]
 == runtime-mgr:serverGroup:create
@@ -25,7 +36,7 @@
 > runtime-mgr:serverGroup:create [flags] <name> [serverIds...]
 ----
 
-This command creates a server group with the name passed in `name` using the server Id(s) passed as argument(s) thereafter.
+Creates a server group with the name passed in `name` using the server Id(s) passed as argument(s) thereafter.
 
 This command accepts only the default flag `--help`.
 
@@ -36,31 +47,11 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:serverGroup:describe [flags] <serverGroupId>
 ----
 
-This command describes the server group passed in `serverGroupId`.
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+Describes the server group passed in `serverGroupId`.
+
+This command accepts the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
 This command also accepts the default flag `--help`.
-
-[[runtime-mgr-servergroup-modify]]
-== runtime-mgr:serverGroup:modify
-
-----
-> runtime-mgr:serverGroup:modify [flags] <serverGroupId>
-----
-
-This command modifies the server group passed in `serverGroupId`.
-In order to update the id for the cluster, you need to pass the  `--name` flag.
-Besides the `--name` flag, this command also has the default `--help` flag.
-
-[[runtime-mgr-servergroup-add-server]]
-== runtime-mgr:serverGroup:add:server
-
-----
-> runtime-mgr:serverGroup:add:server [flags] <serverGroupId> <serverId>
-----
-
-This command adds the server passed in `serverId` to the server group passed in `serverGroupId`.
-
-This command accepts only the default flag `--help`.
 
 [[runtime-mgr-servergroup-delete]]
 == runtime-mgr:serverGroup:delete
@@ -69,8 +60,9 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:serverGroup:delete [flags] <serverGroupId>
 ----
 
-This command deletes the server groups passed in `serverGroupId`.
+Deletes the server groups passed in `serverGroupId`.
 This command accepts only the default flag `--help`.
+
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
@@ -81,9 +73,24 @@ This command does not prompt twice before deleting. If you send a delete instruc
 > runtime-mgr:serverGroup:list [flags]
 ----
 
-This command lists all server groups in the environment.
+Lists all server groups in the environment.
+
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
 This command also accepts the default flag `--help`.
+
+[[runtime-mgr-servergroup-modify]]
+== runtime-mgr:serverGroup:modify
+
+----
+> runtime-mgr:serverGroup:modify [flags] <serverGroupId>
+----
+
+Modifies the server group passed in `serverGroupId`.
+
+In order to update the id for the cluster, you need to pass the  `--name` flag.
+
+Besides the `--name` flag, this command also has the default `--help` flag.
 
 [[runtime-mgr-servergroup-remove-server]]
 == runtime-mgr:serverGroup:remove:server
@@ -92,6 +99,8 @@ This command also accepts the default flag `--help`.
 > runtime-mgr:serverGroup:remove:server [flags] <serverGroupId> <serverId>
 ----
 
-This command removes the server passed in `serverId` from the server group passed in `serverGroupId`.
+Removes the server passed in `serverId` from the server group passed in `serverGroupId`.
+
 This command accepts only the default flag `--help`.
+
 // end::commands[]
