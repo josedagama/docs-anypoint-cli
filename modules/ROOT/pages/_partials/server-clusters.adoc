@@ -6,12 +6,12 @@
 |===
 |Command |Description
 |xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-add-server[runtime-mgr:cluster:add:server] | Adds server to cluster
-|xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-delete[runtime-mgr:cluster:delete] | Deletes cluster
-|xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-list[runtime-mgr:cluster:list] | Lists all clusters in the environment
-|xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-remove-server[runtime-mgr:cluster:remove:server] | Removes server from a cluster
 |xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-create[runtime-mgr:cluster:create] | Creates new cluster
 |xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-describe[runtime-mgr:cluster:describe] | Describes server cluster
+|xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-delete[runtime-mgr:cluster:delete] | Deletes cluster
 |xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-modify[runtime-mgr:cluster:modify] | Modifies cluster
+|xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-list[runtime-mgr:cluster:list] | Lists all clusters in the environment
+|xref:anypoint-cli::server-clusters.adoc#runtime-mgr-cluster-remove-server[runtime-mgr:cluster:remove:server] | Removes server from a cluster
 |===
 
 // end::summary[]
@@ -26,9 +26,46 @@
 > runtime-mgr:cluster:add:server [flags] <clusterId> <serverId>
 ----
 
-This command adds the cluster in `clusterId` to the server passed in `serverId`.
+Adds the cluster in `clusterId` to the server passed in `serverId`.
 
 This command accepts only the default flag `--help`.
+
+[[runtime-mgr-cluster-create]]
+== runtime-mgr:cluster:create
+
+----
+> runtime-mgr:cluster:create <name> [flags]
+----
+
+This command creates a cluster using the id passed in `name`.
+
+In addition to the default flag `--help`, this command accepts the following flags:
+
+[%header,cols="30a,40a,30a"]
+|===
+|Flag | Description| Example
+|`--multicast` | Whether cluster should be multicast | `--multicast`
+|`--server` | Pair of server ID and IP address +
+ IP address is optional for multicast cluster +
+  Provide multiple values to add multiple servers
+| `--server 903083:192.168.0.1`
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+[[runtime-mgr-cluster-describe]]
+== runtime-mgr:cluster:describe
+
+----
+> runtime-mgr:cluster:describe [flags] <clusterId>
+----
+
+Describes the cluster passed in `clusterId`.
+
+This command accepts the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
 
 [[runtime-mgr-cluster-delete]]
 == runtime-mgr:cluster:delete
@@ -37,7 +74,7 @@ This command accepts only the default flag `--help`.
 > runtime-mgr:cluster:delete [flags] <clusterId>
 ----
 
-This command deletes the cluster passed in `clusterId`.
+Deletes the cluster passed in `clusterId`.
 
 This command accepts only the default flag `--help`.
 
@@ -51,51 +88,7 @@ This command does not prompt twice before deleting. If you send a delete instruc
 > runtime-mgr:cluster:list [flags]
 ----
 
-This command lists all clusters in the environment.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
-
-This command also accepts the default flag `--help`.
-
-[[runtime-mgr-cluster-remove-server]]
-== runtime-mgr:cluster:remove:server
-
-----
-> runtime-mgr:cluster:remove:server [flags] <clusterId> <serverId>
-----
-
-This command removes the server passed in `serverId` from the cluster passed in `clusterId`.
-
-This command accepts only the default flag `--help`.
-
-[[runtime-mgr-cluster-create]]
-== runtime-mgr:cluster:create
-
-----
-> runtime-mgr:cluster:create <name> [flags]
-----
-
-This command creates a cluster using the id passed in `name`.
-
-Besides the default `--help` flag, this command also accepts:
-[%header,cols="30,70"]
-|===
-|Flag | Description
-|`--multicast` | Whether cluster should be multicast
-|`--server <id:ip>` | Pair of server ID and IP address. Latter is optional for multicast cluster. Provide multiple values to add multiple servers
-|===
-
-NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
-
-
-[[runtime-mgr-cluster-describe]]
-== runtime-mgr:cluster:describe
-
-----
-> runtime-mgr:cluster:describe [flags] <clusterId>
-----
-
-This command describes the cluster passed in `clusterId`.
+Lists all clusters in the environment.
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
@@ -108,9 +101,21 @@ This command also accepts the default flag `--help`.
 > runtime-mgr:cluster:modify [flags] <clusterId>
 ----
 
-This command modifies the cluster passed in `clusterId`. +
+Modifies the cluster passed in `clusterId`. +
 In order to update the id for the cluster, you need to pass the  `--name` flag.
 
 Besides the `--name` flag, this command also has the default `--help` flag.
+
+
+[[runtime-mgr-cluster-remove-server]]
+== runtime-mgr:cluster:remove:server
+
+----
+> runtime-mgr:cluster:remove:server [flags] <clusterId> <serverId>
+----
+
+Removes the server passed in `serverId` from the cluster passed in `clusterId`.
+
+This command accepts only the default flag `--help`.
 
 // end::commands[]
