@@ -4,8 +4,6 @@ Scripts that use versions of the Anypoint Platform CLI earlier than 4.x do not a
 
 Warning: Anypoint CLI 4.x is not backward compatible with previous versions.
 
-As you write new scripts and update existing ones, use Anypoint CLI 4.x to take advantage of new features and fixes in future releases. Plugins are available only in Anypoint Platform CLI 4.x. 
-
 == Changes
 
 Anypoint CLI 4.x introduces the following changes:
@@ -13,8 +11,8 @@ Anypoint CLI 4.x introduces the following changes:
 * *CLI Name* The new CLI is named `anypoint-cli-v4`. 
 * *Installation* Command groups for Anypoint Platform components are packaged as plugins that can optionally be installed and uninstalled separately from the core installation package.
 * *Authentication* 
-** Instead of using the credentials file located in `~/.config/@mulesoft/anypoint-cli-v4-nodejs/config.json`, you set credentials using the `anypoint-cli-v4 conf` command. +
-** SSO is no longer supported. As a part of Multi-factor authentication (MFA) enablement for all users, the only way to use Anypoint CLI is through xref:access-management::connected-apps-overview.adoc[Connected Apps].
+** Set your credentials using the `anypoint-cli-v4 conf` command. +
+** The only way to authenticate to Anypoint CLI 4.x is through xref:access-management::connected-apps-overview.adoc[Connected Apps].
 * *Command Syntax* The separator between command parameters can be either a colon (:) or a space. For example, the command to get the Exchange asset resource list can be either `anypoint-cli-v4 exchange:asset:resource:list` or `anypoint-cli-v4 exchange asset resource list`.
 
 * *Commands and Properties* The following commands and properties have changed:
@@ -27,6 +25,7 @@ Anypoint CLI 4.x introduces the following changes:
  ** `cloudhub:vpc:describe -o JSON` replaces `cloudhub vpc describe-json`.
  ** Environments and Business Groups commands are no longer supported.
  ** Datagraph API Source Management commands are no longer supported.
+ ** Runtime Fabric Instances commands are no longer supported. 
 
 * *Interactive Mode* Because interactive mode is no longer supported, the following commands and flags are no longer available:
 
