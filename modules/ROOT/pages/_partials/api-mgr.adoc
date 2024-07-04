@@ -187,7 +187,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 | `--javaVersion 17 643404`
 
 | `--releaseChannel`
-| Release channel
+| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS`
 | `--releaseChannel EDGE 643404`
 
 | `--overwrite`
@@ -505,7 +505,7 @@ Include to redeploy APIs from unclassified environments | `--environmentName mul
 | `--javaVersion 17 643404`
 
 | `--releaseChannel`
-| Release channel
+| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS`
 | `--releaseChannel EDGE 643404`
 
 | `--overwrite`
