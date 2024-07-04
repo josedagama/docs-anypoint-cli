@@ -183,11 +183,13 @@ In addition to the default flag `--help`, this command accepts the following fla
 | `--gatewayVersion: 9.9.9.9  643404`
 
 | `--javaVersion`
-| Gateway Java version
+| Gateway Java version +
+Supported values are `8` and `17`
 | `--javaVersion 17 643404`
 
 | `--releaseChannel`
-| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS`
+| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS` +
+This flag is used by `--target` `RTF`, `CH`, and `CH2`
 | `--releaseChannel EDGE 643404`
 
 | `--overwrite`
@@ -501,11 +503,13 @@ Include to redeploy APIs from unclassified environments | `--environmentName mul
 | CloudHub Gateway version | `--gatewayVersion 9.9.9 643404`
 
 | `--javaVersion`
-| Gateway Java version
+| Gateway Java version +
+Supported values are `8` and `17`
 | `--javaVersion 17 643404`
 
 | `--releaseChannel`
-| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS`
+| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS` +
+This flag is used by `--target` `RTF`, `CH`, and `CH2`
 | `--releaseChannel EDGE 643404`
 
 | `--overwrite`
