@@ -11,7 +11,7 @@
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-change-specification[api-mgr:api:change-specification] | Changes the asset version for an API instance by choosing a new version from Exchange
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-classify[api-mgr:api:classify] |Classifies an API instance in a given environment
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-delete[api-mgr:api:delete] | Deletes an API
-|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deploy[api-mgr:api:deploy] | Deploys an API to CloudHub, hybrid server, or Runtime Fabric
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deploy[api-mgr:api:deploy] | Deploys an API to CloudHub, CloudHub2, Hybrid Server, or Runtime Fabric
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-deprecate[api-mgr:api:deprecate] | Deprecates an API instance
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-describe[api-mgr:api:describe] | Shows details of an API
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-download-proxy[api-mgr:api:download-proxy] | Downloads the API proxy ZIP file to a local directory
@@ -19,7 +19,7 @@
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-list[api-mgr:api:list] | Lists all APIs in API Manager 2.x
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-manage[api-mgr:api:manage] | Manages a new API, API version, or new API instance with an asset from Exchange
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-promote[api-mgr:api:promote] | Promotes an API instance from source environment
-|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-redeploy[api-mgr:api:redeploy] | Redeploys an API to CloudHub, Hybrid server, or Runtime Fabric
+|xref:anypoint-cli::api-mgr.adoc#api-mgr-api-redeploy[api-mgr:api:redeploy] | Redeploys an API to CloudHub, CloudHub2, Hybrid Server, or Runtime Fabric
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-api-undeprecate[api-mgr:api:undeprecate] | Undeprecates an API instance
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-contract-delete[api-mgr:contract:delete] | Deletes a given API contract
 |xref:anypoint-cli::api-mgr.adoc#api-mgr-contract-list[api-mgr:contract:list] | Lists all contracts to a given API instance
@@ -182,12 +182,20 @@ In addition to the default flag `--help`, this command accepts the following fla
 | The CloudHub Gateway version
 | `--gatewayVersion: 9.9.9.9  643404`
 
+| `--javaVersion`
+| Gateway Java version
+| `--javaVersion 17 643404`
+
+| `--releaseChannel`
+| Release channel
+| `--releaseChannel EDGE 643404`
+
 | `--overwrite`
-| Update application if it exists +
-| `--overwrite  643404`
+| Update application if exists +
+Include the flag to enable it | `--overwrite`
 
 | `--target`
-| Hybrid or RTF deployment target ID +
+| Hybrid, RTF, CH or CH2 deployment target ID
 | `--target 1598794 643404`
 
 |===
@@ -492,12 +500,21 @@ Include to redeploy APIs from unclassified environments | `--environmentName mul
 | `--gatewayVersion`
 | CloudHub Gateway version | `--gatewayVersion 9.9.9 643404`
 
+| `--javaVersion`
+| Gateway Java version
+| `--javaVersion 17 643404`
+
+| `--releaseChannel`
+| Release channel
+| `--releaseChannel EDGE 643404`
+
 | `--overwrite`
 | Update application if exists +
 Include the flag to enable it | `--overwrite`
 
 | `--target`
-| Hybrid or RTF deployment target ID | `--target 1598794 643404`
+| Hybrid, RTF, CH or CH2 deployment target ID 
+| `--target 1598794 643404`
 
 |===
 
