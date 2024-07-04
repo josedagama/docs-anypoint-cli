@@ -184,7 +184,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 
 | `--javaVersion`
 | Gateway Java version +
-Supported values are `8` and `17`
+This flag is used by `--target` `RTF`, `CH`, and `CH2`
 | `--javaVersion 17 643404`
 
 | `--releaseChannel`
@@ -504,7 +504,7 @@ Include to redeploy APIs from unclassified environments | `--environmentName mul
 
 | `--javaVersion`
 | Gateway Java version +
-Supported values are `8` and `17`
+This flag is used by `--target` `RTF`, `CH`, and `CH2`
 | `--javaVersion 17 643404`
 
 | `--releaseChannel`
