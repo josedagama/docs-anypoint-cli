@@ -4,102 +4,100 @@
 
 Anypoint Platform CLI provides the ability to manage these features in Anypoint Platform:
 
-xref:account.adoc[Anypoint Platform Accounts]
+* <<account>>
+* <<catalog>>
+* <<api-gov>>
+* <<api-mgr>>
+* <<cloudhub-2>>
+* <<cloudhub-apps>>
+* <<cloudhub-dlb>>
+* <<cloudhub-vpc>>
+* <<datagraph-load-balancer>>
+* <<design-center>>   
+* <<exchange>>
+* <<standalone-apps>>
+* <<standalone-alerts>>
+* <<servers>>
+* <<server-groups>>
+* <<server-clusters>>
 
-xref:api-catalog.adoc[API Catalog]
 
-xref:api-governance.adoc[API Governance]
-
-xref:api-mgr.adoc[API Manager]
-
-xref:cloudhub2-apps.adoc[Cloudhub 2.0]
-
-xref:cloudhub-apps.adoc[Cloudhub Apps]
-
-xref:cloudhub-dlb.adoc[Cloudhub Dedicated Load Balancers]
-
-xref:cloudhub-vpc.adoc[Cloudhub Anypoint VPCs]
-
-xref:datagraph-load-balancer.adoc[DataGraph Load Balancer]
-
-// xref:datagraph-source.adoc[DataGraph Source]
-
-xref:design-center.adoc[Design Center]
-
-xref:exchange-assets.adoc[Exchange Assets]
-
-xref:standalone-apps.adoc[Hybrid Applications]
-
-xref:standalone-alerts.adoc[Alerts for Hybrid Applications]
-
-xref:servers.adoc[Local Servers]
-
-xref:server-groups.adoc[Local Server Groups]
-
-xref:server-clusters.adoc[Local Server Clusters]
-
+[[account]]
 == Anypoint Platform Accounts
 
 include::4.x@anypoint-cli::partial$account.adoc[tag=summary]
 
+[[catalog]]
 == API Catalog
 
 include::4.x@anypoint-cli::partial$api-catalog.adoc[tag=summary]
 
-
+[[api-gov]]
 == API Governance
 
 include::4.x@anypoint-cli::partial$api-governance.adoc[tag=summary]
 
-
+[[api-mgr]]
 == API Manager
 
 include::4.x@anypoint-cli::partial$api-mgr.adoc[tag=summary]
 
+[[cloudhub-2]]
 == Cloudhub 2.0
 
 include::4.x@anypoint-cli::partial$cloudhub2-apps.adoc[tag=summary]
 
+[[cloudhub-apps]]
 == Cloudhub Apps
 
 include::4.x@anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
 
+[[cloudhub-dlb]]
 == Cloudhub Dedicated Load Balancers
 
 include::4.x@anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
 
+[[cloudhub-vpc]]
 == Cloudhub Anypoint VPCs
 
 include::4.x@anypoint-cli::partial$cloudhub-vpc.adoc[tag=summary]
 
+[[datagraph-load-balancer]]
 == Datagraph Load Balancer
 
 include::4.x@anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
 
+[[design-center]]
 == Design Center
 
 include::4.x@anypoint-cli::partial$design-center.adoc[tag=summary]
 
+[[exchange]]
 == Exchange Assets
 
 include::4.x@anypoint-cli::partial$exchange-assets.adoc[tag=summary]
 
+[[standalone-apps]]
 == Hybrid Applications
 
 include::4.x@anypoint-cli::partial$standalone-apps.adoc[tag=summary]
 
+[[standalone-alerts]]
 == Alerts for Hybrid Applications
 
 include::4.x@anypoint-cli::partial$standalone-alerts.adoc[tag=summary]
 
+[[servers]]
 == Local Servers
 
 include::4.x@anypoint-cli::partial$servers.adoc[tag=summary]
 
+[[server-groups]]
 == Local Server Groups
 
 include::4.x@anypoint-cli::partial$server-groups.adoc[tag=summary]
 
+[[server-clusters]]
 == Local Server Clusters
 include::4.x@anypoint-cli::partial$server-clusters.adoc[tag=summary]
 
