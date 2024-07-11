@@ -1,5 +1,7 @@
 = CLI for Anypoint Platform Accounts
 
+Use the `acount` commands to automate your Anypoint Plaform Account processes. 
+
 include::anypoint-cli::partial$account.adoc[tag=summary]
 
 include::anypoint-cli::partial$account.adoc[tag=commands]
