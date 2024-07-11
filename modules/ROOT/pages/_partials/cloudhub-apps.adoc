@@ -5,21 +5,21 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-list[runtime-mgr:cloudhub:alert:list] | Lists all alerts in the environment
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-history-describe[runtime-mgr:cloudhub:alert:history:describe] | Describes the history of the alarm
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-list[runtime-mgr:cloudhub:application:list]| Lists all applications in the environment
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe[runtime-mgr:cloudhub:application:describe] | Shows application details
-// |<<runtime-mgr-cloudhub-application-describe-json>> | Show raw application JSON response
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-stop[runtime-mgr:cloudhub:application:stop] | Stops a running application
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-start[runtime-mgr:cloudhub:application:start] | Starts an application
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-restart[runtime-mgr:cloudhub:application:restart] | Restarts a running application
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-history-describe[runtime-mgr:cloudhub-alert-history:describe] | Describes the history of the alarm
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-alert-list[runtime-mgr:cloudhub-alert:list] | Lists all alerts in the environment
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-copy[runtime-mgr:cloudhub-application:copy] | Copies a CloudHub application
 |xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-delete[runtime-mgr:cloudhub:application:delete]| Deletes an application
-|xref:anypoint-cli::cloudhub-apps.adoc#deploy-to-cloudhub[runtime-mgr:cloudhub:application:deploy] | Deploys a new application
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-modify[runtime-mgr:cloudhub:application:modify]| Modifies an existing application, optionally updating the ZIP file
+|xref:anypoint-cli::cloudhub-apps.adoc#deploy-to-cloudhub[runtime-mgr:cloudhub-application:deploy] | Deploys a new application
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-describe[runtime-mgr:cloudhub-application:describe] | Shows application details
+// |<<runtime-mgr-cloudhub-application-describe-json>> | Show raw application JSON response
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-download-logs[runtime-mgr:cloudhub-application:download:logs] | Download application logs to specified directory
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-list[runtime-mgr:cloudhub:application:list]| Lists all applications in the environment
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-modify[runtime-mgr:cloudhub-application:modify]| Modifies an existing application, optionally updating the ZIP file
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-restart[runtime-mgr:cloudhub-application:restart] | Restarts a running application
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-start[runtime-mgr:cloudhub-application:start] | Starts an application
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-stop[runtime-mgr:cloudhub-application:stop] | Stops a running application
 // |<<runtime-mgr application revert-runtime]| Reverts application to its previous runtime
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-download-logs[runtime-mgr:cloudhub:application:download:logs] | Download application logs to specified directory
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-tail-logs[runtime-mgr:cloudhub:application:tail:logs] | Tail application logs
-|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-copy[runtime-mgr:cloudhub:application:copy] | Copies a CloudHub application
+|xref:anypoint-cli::cloudhub-apps.adoc#runtime-mgr-cloudhub-application-tail-logs[runtime-mgr:cloudhub-application:tail:logs] | Tail application logs
 // |<<runtime-mgr-cloudhub-application-upgrade-runtime[>> | Upgrades application runtime to the latest patch version or if a version if specified, to that version.
 // |<<runtime-mgr-cloudhub-application-downgrade-runtime>> | Downgrades application runtime to the previous runtime version or if a version is specified, to that version.
 |xref:anypoint-cli::cloudhub-apps.adoc#cloudhub-region-list[cloudhub:region:list] | Lists all supported regions
@@ -30,18 +30,6 @@
 
 
 // tag::commands[]
-
-[[runtime-mgr-cloudhub-alert-list]]
-== runtime-mgr:cloudhub-alert:list
-
-----
-> runtime-mgr:cloudhub-alert:list [flags]
-----
-This command lists all alerts associated with your current environment.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
-
-This command also accepts the default flag `--help`.
 
 [[runtime-mgr-cloudhub-alert-history-describe]]
 == runtime-mgr:cloudhub-alert-history:describe
@@ -55,76 +43,68 @@ This command has the `--output` flag. Use the `--output` flag to specify the res
 
 This command accepts only the default flag `--help`.
 
-[[runtime-mgr-cloudhub-application-list]]
-== runtime-mgr:cloudhub-application:list
+
+[[runtime-mgr-cloudhub-alert-list]]
+== runtime-mgr:cloudhub-alert:list
 
 ----
-> runtime-mgr:cloudhub-application:list [flags]
+> runtime-mgr:cloudhub-alert:list [flags]
 ----
+This command lists all alerts associated with your current environment.
 
-This command lists all applications available in your Anypoint Platform CLI. It returns your application name, its status, the number of vCores assigned and the last time it was updated.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
 
 This command also accepts the default flag `--help`.
 
-[[runtime-mgr-cloudhub-application-describe]]
-== runtime-mgr:cloudhub-application:describe
+[[runtime-mgr-cloudhub-application-copy]]
+== runtime-mgr:cloudhub-application:copy
 
 ----
-> runtime-mgr:cloudhub-application:describe [flags] <name>
+> runtime-mgr:cloudhub-application:copy <source> <target> [flags]
 ----
 
-This command displays information on the application you pass in `<name>`. +
-Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`. +
-The command returns data such as the application's domain, its status, the last time it was updated, the Mule version, the ZIP file name, the region, monitoring, and workers; as well as `TRUE` or `FALSE` information for persistent queues and static IPs enablement.
+This command copies the CloudHub application passed in `source` to the target passed in `target`.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+Arguments `source` and `target` should be formatted as follows: `([group_id]/)<asset_id>/<version>`.
 
-This command also accepts the default flag `--help`.
+If `group_id` is not specified, it defaults to the currently selected Organization ID.
 
-// == runtime-mgr:cloudhub-application:describe-json
-
-// ----
-// > runtime-mgr:cloudhub-application:describe-json  [options] <name>
-// ----
-
-// This command returns the raw JSON response of the application you specify in `<name>`.
-
-// You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
-// This command accepts only the default options: `--help` and `-o`/`--output`
-
-[[runtime-mgr-cloudhub-application-stop]]
-== runtime-mgr:cloudhub-application:stop
+For example:
 
 ----
-> runtime-mgr:cloudhub-application:stop  [flags] <name>
+> runtime-mgr:cloudhub-application:copy Services:QA/application-1 Development:QA/application-2
 ----
-
-This command stops the running application you specify in `<name>`.
-This command accepts only the default flag `--help`.
-
-[[runtime-mgr-cloudhub-application-start]]
-== runtime-mgr:cloudhub-application:start
+Copies the application named `application-1` from the QA environment of the Services organization to the QA environment of the Development organization. +
+If the Anypoint Platform CLI is using the QA environment in the Services organization, the command can simply take the application name as a `source`:
 
 ----
-> runtime-mgr:cloudhub-application:start [flags] <name>
+> runtime-mgr:cloudhub-application:copy application-1 Development/QA/application-2
 ----
 
-This command starts the running application you specify in `<name>`.
-This command accepts only the default flag `--help`.
+[NOTE]
+Running this command requires your user to have read/write access to the `/tmp` directory of the OS where CLI is installed.
 
-[[runtime-mgr-cloudhub-application-restart]]
-== runtime-mgr:cloudhub-application:restart
+In addition to the default `--help`, and `-f`/`--fields`  flags, this command also accepts:
 
-----
-> runtime-mgr:cloudhub-application:restart  [flags] <name>
-----
+[%header,cols="30a,70a"]
+|===
+|Flag |Description
+|--property  | Set a property (`name:value`).
 
-This command restarts the running application you specify in `<name>`.
+Enclose the property in quotes and escape the `:` and `=` characters,
+for example:
 
-This command accepts only the default flag `--help`.
+`--property "salesforce.password:qa\=34534"`
+|===
+
+NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
+
+
+[NOTE]
+When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` flag.
+For information about safely hidden application properties, see xref:runtime-manager::secure-application-properties.adoc[Safely Hide Application Properties].
+
+
 
 [[runtime-mgr-cloudhub-application-delete]]
 == runtime-mgr:cloudhub-application:delete
@@ -198,6 +178,45 @@ If you deploy without using any flags, your application deploys using all your d
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
+[[runtime-mgr-cloudhub-application-describe]]
+== runtime-mgr:cloudhub-application:describe
+
+----
+> runtime-mgr:cloudhub-application:describe [flags] <name>
+----
+
+This command displays information on the application you pass in `<name>`. +
+Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`. +
+The command returns data such as the application's domain, its status, the last time it was updated, the Mule version, the ZIP file name, the region, monitoring, and workers; as well as `TRUE` or `FALSE` information for persistent queues and static IPs enablement.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+[[runtime-mgr-cloudhub-application-download-logs]]
+== runtime-mgr:cloudhub-application:download-logs
+
+----
+> runtime-mgr:cloudhub-application:download-logs [flags] <name> <directory>
+----
+This command downloads logs the for application specified in `<name>` to the specified directory.
+
+Keep in mind that contrarily to what you see in the UI, the logs you download from the CLI won't separate system logs from worker logs.
+
+[[runtime-mgr-cloudhub-application-list]]
+== runtime-mgr:cloudhub-application:list
+
+----
+> runtime-mgr:cloudhub-application:list [flags]
+----
+
+This command lists all applications available in your Anypoint Platform CLI. It returns your application name, its status, the number of vCores assigned and the last time it was updated.
+
+This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+
 [[runtime-mgr-cloudhub-application-modify]]
 == runtime-mgr:cloudhub-application:modify
 
@@ -212,30 +231,36 @@ This command's output includes `Status`, which is the application's previous dep
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
-
-
-//TODO Check revert-runtime deprecation
-// == runtime-mgr application revert-runtime
-//
-// [source,Example]
-// ----
-// > runtime-mgr application revert-runtime [options] <name>
-// ----
-// This command reverts the application defined in `<name>` to its previous runtime environment. +
-// You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
-
-// CLI DEFAULTS
-// include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
-
-[[runtime-mgr-cloudhub-application-download-logs]]
-== runtime-mgr:cloudhub-application:download-logs
+[[runtime-mgr-cloudhub-application-restart]]
+== runtime-mgr:cloudhub-application:restart
 
 ----
-> runtime-mgr:cloudhub-application:download-logs [flags] <name> <directory>
+> runtime-mgr:cloudhub-application:restart  [flags] <name>
 ----
-This command downloads logs the for application specified in `<name>` to the specified directory.
 
-Keep in mind that contrarily to what you see in the UI, the logs you download from the CLI won't separate system logs from worker logs.
+This command restarts the running application you specify in `<name>`.
+
+This command accepts only the default flag `--help`.
+
+[[runtime-mgr-cloudhub-application-start]]
+== runtime-mgr:cloudhub-application:start
+
+----
+> runtime-mgr:cloudhub-application:start [flags] <name>
+----
+
+This command starts the running application you specify in `<name>`.
+This command accepts only the default flag `--help`.
+
+[[runtime-mgr-cloudhub-application-stop]]
+== runtime-mgr:cloudhub-application:stop
+
+----
+> runtime-mgr:cloudhub-application:stop  [flags] <name>
+----
+
+This command stops the running application you specify in `<name>`.
+This command accepts only the default flag `--help`.
 
 [[runtime-mgr-cloudhub-application-tail-logs]]
 == runtime-mgr:cloudhub-application:tail-logs
@@ -247,74 +272,6 @@ Keep in mind that contrarily to what you see in the UI, the logs you download fr
 This command tails application logs.
 
 This command accepts only the default flag `--help`.
-
-// == runtime-mgr cloudhub-application upgrade-runtime
-//
-// [source,Example]
-// ----
-// > runtime-mgr cloudhub-application upgrade-runtime [options] <name>
-// ----
-//
-// This command upgrades the runtime version of the application passed in `name` to the latest patch version. If the `-v`/`--version` option is used to specify a specific runtime version, this command updates the application's runtime to that version. +
-// Besides the `--version` option, this command also has the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
-//
-// == runtime-mgr cloudhub-application downgrade-runtime
-//
-// [source,Example]
-// ----
-// > runtime-mgr cloudhub-application downgrade-runtime [options] <name>
-// ----
-// This command downgrades the runtime version of the application passed in `name` to the previous runtime version. If the `-v`/`--version` option is used to specify a specific runtime version, this command updates the application's runtime to that version. +
-// Besides the `--version` option, this command also has the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
-
-[[runtime-mgr-cloudhub-application-copy]]
-== runtime-mgr:cloudhub-application:copy
-
-----
-> runtime-mgr:cloudhub-application:copy <source> <target> [flags]
-----
-
-This command copies the CloudHub application passed in `source` to the target passed in `target`.
-
-Arguments `source` and `target` should be formatted as follows: `([group_id]/)<asset_id>/<version>`.
-
-If `group_id` is not specified, it defaults to the currently selected Organization ID.
-
-For example:
-
-----
-> runtime-mgr:cloudhub-application:copy Services:QA/application-1 Development:QA/application-2
-----
-Copies the application named `application-1` from the QA environment of the Services organization to the QA environment of the Development organization. +
-If the Anypoint Platform CLI is using the QA environment in the Services organization, the command can simply take the application name as a `source`:
-
-----
-> runtime-mgr:cloudhub-application:copy application-1 Development/QA/application-2
-----
-
-[NOTE]
-Running this command requires your user to have read/write access to the `/tmp` directory of the OS where CLI is installed.
-
-In addition to the default `--help`, and `-f`/`--fields`  flags, this command also accepts:
-
-[%header,cols="30a,70a"]
-|===
-|Flag |Description
-|--property  | Set a property (`name:value`).
-
-Enclose the property in quotes and escape the `:` and `=` characters,
-for example:
-
-`--property "salesforce.password:qa\=34534"`
-|===
-
-NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
-
-
-[NOTE]
-When copying an application containing safely hidden application properties, pass the properties in the `copy` command using the `--property` flag.
-For information about safely hidden application properties, see xref:runtime-manager::secure-application-properties.adoc[Safely Hide Application Properties].
-
 
 [[cloudhub-region-list]]
 == cloudhub:region:list
@@ -337,5 +294,52 @@ This command also accepts the default flag `--help`.
 This command lists all supported runtimes.
 
 This command accepts only the default flag `--help`.
+
+
+
+// == runtime-mgr:cloudhub-application:describe-json
+
+// ----
+// > runtime-mgr:cloudhub-application:describe-json  [options] <name>
+// ----
+
+// This command returns the raw JSON response of the application you specify in `<name>`.
+
+// You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+
+// This command accepts only the default options: `--help` and `-o`/`--output`
+
+
+//TODO Check revert-runtime deprecation
+// == runtime-mgr application revert-runtime
+//
+// [source,Example]
+// ----
+// > runtime-mgr application revert-runtime [options] <name>
+// ----
+// This command reverts the application defined in `<name>` to its previous runtime environment. +
+// You can start typing your application's name and press `tab` for Anypoint Platform CLI to autocomplete it, or you can double tap `tab` for a full list of all the values you can pass.
+
+// CLI DEFAULTS
+// include::partial$cli-default-options.adoc[tag=CLIdefaultOptions]
+
+// == runtime-mgr cloudhub-application upgrade-runtime
+//
+// [source,Example]
+// ----
+// > runtime-mgr cloudhub-application upgrade-runtime [options] <name>
+// ----
+//
+// This command upgrades the runtime version of the application passed in `name` to the latest patch version. If the `-v`/`--version` option is used to specify a specific runtime version, this command updates the application's runtime to that version. +
+// Besides the `--version` option, this command also has the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
+//
+// == runtime-mgr cloudhub-application downgrade-runtime
+//
+// [source,Example]
+// ----
+// > runtime-mgr cloudhub-application downgrade-runtime [options] <name>
+// ----
+// This command downgrades the runtime version of the application passed in `name` to the previous runtime version. If the `-v`/`--version` option is used to specify a specific runtime version, this command updates the application's runtime to that version. +
+// Besides the `--version` option, this command also has the default `--help`, `-f`/`--fields` and `-o`/`--output` options.
 
 // end::commands[]
