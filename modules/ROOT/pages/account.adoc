@@ -1,5 +1,7 @@
 = CLI for Anypoint Platform Accounts
 
+Use the `account` commands to automate your Anypoint Plaform Account processes. For more information about how to use these commands, see xref:access-management::index.adoc[the Access Management documentation].
+
 include::anypoint-cli::partial$account.adoc[tag=summary]
 
 include::anypoint-cli::partial$account.adoc[tag=commands]
