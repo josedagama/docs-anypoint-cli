@@ -1,72 +1,62 @@
 = CloudHub Dedicated Load Balancers
 
+Use the `cloudhub:load-balancer` commands to automate your Cloudhub Dedicated LOad Balancers Processes. For more information about how to use these commands, see xref:cloudhub::index.adoc[the CloudHub documentation].
 
 // tag::summary[]
 
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub:load-balancer:list] | Lists all load balancers in an organization
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub:load-balancer:describe] | Shows load balancer details
-// |<<cloudhub-load-balancer-describe-json>> | Show load balancer details in raw JSON response
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub:load-balancer:create] | Creates a load balancer
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub:load-balancer:start] | Starts a load balancer
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub:load-balancer:stop] | Stops a load balancer
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-delete[cloudhub:load-balancer:delete] | Deletes a load balancer
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-add[cloudhub:load-balancer:ssl-endpoint:add] | Adds an additional certificate to an existing load balancer
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-remove[cloudhub:load-balancer:ssl-endpoint:remove] | Removes a certificate from a load balancer
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-set-default[cloudhub:load-balancer:ssl-endpoint:set-default] | Sets the default certificate that the load balancer will serve
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-describe[cloudhub:load-balancer:ssl-endpoint:describe] | Shows the load balancer configuration for a particular certificate
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-allowlist-add[cloudhub:load-balancer:allowlist:add] | Adds an IP or range of IPs to the load balancer allowlist
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-allowlist-remove[cloudhub:load-balancer:allowlist:remove] | Removes an IP or range of IPs from the load balancer allowlist
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-describe[cloudhub:load-balancer:mappings:describe] | Lists the proxy mapping rules for a load balancer. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-add[cloudhub:load-balancer:mappings:add] | Adds a proxy mapping rule at the specified index. If no `certificateName` is given, the mappings for the default SSL endpoint are shown
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub:load-balancer:mappings:remove] | Removes a proxy mapping rule. If no `certificateName` is given, the mappings for the default SSL endpoint are shown.
-|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-enable[cloudhub:load-balancer:dynamic-ips:enable] | Enables dynamic IPs
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-create[cloudhub:load-balancer:create] | Creates a load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-delete[cloudhub:load-balancer:delete] | Deletes a load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-describe[cloudhub:load-balancer:describe] | Shows load balancer details
 |xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-disable[cloudhub:load-balancer:dynamic-ips:disable] | Disables dynamic IPs
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-dynamic-ips-enable[cloudhub:load-balancer:dynamic-ips:enable] | Enables dynamic IPs
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-list[cloudhub:load-balancer:list] | Lists all load balancers in an organization
+// |<<cloudhub-load-balancer-describe-json>> | Show load balancer details in raw JSON response
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-add[cloudhub:load-balancer:mappings:add] | Adds a proxy mapping rule at the specified index
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-describe[cloudhub:load-balancer:mappings:describe] | Lists the proxy mapping rules for a load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-mappings-remove[cloudhub:load-balancer:mappings:remove] | Removes a proxy mapping rule
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-add[cloudhub:load-balancer:ssl-endpoint:add] | Adds an additional certificate to an existing load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-describe[cloudhub:load-balancer:ssl-endpoint:describe] | Shows the load balancer configuration for a particular certificate
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-remove[cloudhub:load-balancer:ssl-endpoint:remove] | Removes a certificate from a load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-ssl-endpoint-set-default[cloudhub:load-balancer:ssl-endpoint:set-default] | Sets the default certificate that the load balancer will serve
+
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-start[cloudhub:load-balancer:start] | Starts a load balancer
+|xref:anypoint-cli::cloudhub-dlb.adoc#cloudhub-load-balancer-stop[cloudhub:load-balancer:stop] | Stops a load balancer
 |===
 
 // end::summary[]
 
 
 // tag::commands[]
-
-[[cloudhub-load-balancer-list]]
-== cloudhub:load-balancer:list
-
-----
-> cloudhub:load-balancer:list [flags]
-----
-This command lists all load balancers in your Anypoint Platform. It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
-
-This command also accepts the default flag `--help`.
-
-[[cloudhub-load-balancer-describe]]
-== cloudhub:load-balancer:describe
+[[cloudhub-load-balancer-allowlist-add]]
+== cloudhub:load-balancer:allowlist:add
 
 ----
-> cloudhub:load-balancer:describe [flags] <name>
+> cloudhub:load-balancer:allowlist:add [flags] <name> <cidrBlock>
 ----
-This command displays information about the load balancer that is specified in `<name>`.
+Adds a range of IP addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`
 
-Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`.
+[NOTE]
+The allowlist works at the load balancer level, not at the CN certificate level. Make sure you only pass IP addresses formatted in https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation].
 
-It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
+This command accepts the default flag `--help`.
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+[[cloudhub-load-balancer-allowlist-remove]]
+== cloudhub:load-balancer:allowlist:remove
 
-This command also accepts the default flag `--help`. 
+----
+> cloudhub:load-balancer:allowlist:remove <name> <cidrBlock>
+----
+Removes an IP or range of IPs addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`
 
-// == cloudhub:load-balancer:describe-json
+[WARNING]
+This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-// ----
-// > cloudhub load-balancer describe [options] <name>
-// ----
-// This command displays a raw JSON response from the load balancer that is specified in `<name>`.
-
-// This command accepts only the default options: `--help` and `-o`/`--output`
+This command accepts the default flag `--help`.
 
 [[cloudhub-load-balancer-create]]
 == cloudhub:load-balancer:create
@@ -74,7 +64,8 @@ This command also accepts the default flag `--help`.
 ----
 > cloudhub:load-balancer:create [flags] <vpc> <name> <certificate> <privateKey>
 ----
-This command creates a load balancer using the specified values in the variables.
+Creates a load balancer using the specified values in the following variables:
+
 [%header,cols="12,53a,35a"]
 |===
 |Value |Description |Example
@@ -94,41 +85,24 @@ By default, your load balancer listens external requests on HTTPS and communicat
 If you configured your Mule application within the Anypoint VPC to listen on HTTPS, make sure you set `upstreamProtocol` to HTTPS when creating the mapping list using the <<cloudhub-load-balancer-mappings-add,load-balancer mappings add>> command.
 --
 
-Besides the default `--help` flag, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header,cols="30a,70a"]
+[%header,cols="30a,40a,40a"]
 |===
-|Flag |Description
-|`--http` | Specifies the Load balancer HTTP behavior. It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `--redirect` (redirects to HTTPS).
-|`--clientCertificate` | Client certificate file
-|`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional).
-|`--crl` | Certificate revocation list file
-|`--[no-]tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
-|`--[no-]dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts
+|Flag |Description| Example
+|`--clientCertificate` | Client certificate file | `--clientCertificate /Users/mule/Documents/CertificateFile.pem`
+|`--crl` | Certificate revocation list file | `--crl /Users/mule/Documents/crlFile.pem`
+|`--http` | Specifies the Load balancer HTTP behavior. It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `redirect` (redirects to HTTPS).| `--http off`
+|`--[no-]tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2 | `--[no-]tlsv1`
+|`--[no-]dynamic-ips` | Uses dynamic IPs, which are not persistent through restarts | `--[no-]dynamic-ips`
+|`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always), `off` (don't verify), or `optional` (verification optional). | `--verificationMode optional`
+
 |===
 
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
-
-[[cloudhub-load-balancer-start]]
-== cloudhub:load-balancer:start
-
-----
-> cloudhub:load-balancer:start [flags] <name>
-----
-This command starts the load balancer specified in `<name>`. +
-This command accepts only the default flag `--help`.
-
-[[cloudhub-load-balancer-stop]]
-== cloudhub:load-balancer:stop
-
-----
-> cloudhub:load-balancer:stop [flags] <name>
-----
-This command stops the load balancer specified in `<name>`. +
-This command accepts only the default flag `--help`.
 
 [[cloudhub-load-balancer-delete]]
 == cloudhub:load-balancer:delete
@@ -137,12 +111,121 @@ This command accepts only the default flag `--help`.
 > cloudhub:load-balancer:delete [flags] <name>
 ----
 
-This command deletes the load balancer specified in `<name>`.
+Deletes the load balancer specified in `<name>`.
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default flag `--help`.
+This command accepts the default flag `--help`.
+
+[[cloudhub-load-balancer-describe]]
+== cloudhub:load-balancer:describe
+
+----
+> cloudhub:load-balancer:describe [flags] <name>
+----
+Displays information about the load balancer that is specified in `<name>` +
+Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>` +
+It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
+
+This command accepts the `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`. 
+
+[[cloudhub-load-balancer-dynamic-ips-disable]]
+== cloudhub:load-balancer:dynamic-ips:disable
+
+----
+> cloudhub:load-balancer:dynamic-ips:disable [flags] <name>
+----
+Disables dynamic IPs for the load balancer specified in `<name>`
+
+This command accepts the default flag `--help`.
+
+[[cloudhub-load-balancer-dynamic-ips-enable]]
+== cloudhub:load-balancer:dynamic-ips:enable
+
+----
+> cloudhub:load-balancer:dynamic-ips:enable [flags] <name>
+----
+Enables dynamic IPs for the load balancer specified in `<name>`
+
+This command accepts the default flag `--help`.
+
+
+[[cloudhub-load-balancer-list]]
+== cloudhub:load-balancer:list
+
+----
+> cloudhub:load-balancer:list [flags]
+----
+Lists all load balancers in your Anypoint Platform +
+It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
+
+This command accepts the `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+[[cloudhub-load-balancer-mappings-add]]
+== cloudhub:load-balancer:mappings:add
+
+----
+> cloudhub:load-balancer:mappings:add [flags] <name> <index> <inputUri> <appName> <appUri> [certificateName]
+----
+
+Adds a proxy mapping rule to the load balancer specified in `<name>` in the CN passed under the `certificateName` flag. +
+If no `certificateName` is passed, Anypoint Platform CLI adds the mappings to the default SSL endpoint.
+
+
+[%header,cols="12a,68a,20a"]
+|===
+|Value |Description |Example
+|`name` |Name of the load balancer to which this rule is applied. |`testloadbalancer`
+|`inputUri` |Name of the URI of your input URL |`example.com`
+|`appName` |Name of the app of your output URL to which the request is forwarded |`{app}-example`
+|`appUri` |URI of the app of your output URL to which the request is forwarded |/
+|===
+
+For the values in the example above, for an input call to `my-superapp.api.example.com/status?limit=10`, the endpoint `my-superapp-example: /status?limit=10` will be called for the application.
+
+If no upstream protocol is set, HTTP is used as default.
+
+[%header,cols="25a,40a,30a"]
+|===
+| Flag | Description| Example
+| `--certificateName ` | Certificate name | `--certificateName exampleName`
+| `--upstreamProtocol <protocol>` |Set the protocol used by your application to communicate internally with your load balancer +
+Supported Values: `http`, `https` | `--upstreamProtocol http`
+
+|===
+
+
+[[cloudhub-load-balancer-mappings-describe]]
+== cloudhub:load-balancer:mappings:describe
+
+----
+> cloudhub:load-balancer:mappings:describe <name> [certificateName]
+----
+Lists the mapping rules for the load balancer specified in `<name>` +
+If no `certificateName` is passed, Anypoint Platform CLI returns the mappings for the default SSL endpoint.
+
+This command accepts the `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
+
+This command also accepts the default flag `--help`.
+
+[[cloudhub-load-balancer-mappings-remove]]
+== cloudhub:load-balancer:mappings:remove
+
+----
+> cloudhub:load-balancer:mappings:remove [flags] <name> <index> [certificateName]
+----
+Removes the proxy mapping rules from the load balancer specified in `<name>` at the priority index specified in `<index>` and the CN specified as the `certificateName` flag +
+If no `certificateName` is passed, Anypoint Platform CLI removes the mappings for the default SSL endpoint.
+
+This command accepts the default flag `--help`.
 
 [[cloudhub-load-balancer-ssl-endpoint-add]]
 == cloudhub:load-balancer:ssl-endpoint:add
@@ -150,7 +233,7 @@ This command accepts only the default flag `--help`.
 ----
 > cloudhub:load-balancer:ssl-endpoint:add [flags] <name> <certificate> <privateKey>
 ----
-This command adds an SSL endpoint to the load balancer specified in `<name>`, using the certificate and private key passed.
+Adds an SSL endpoint to the load balancer specified in `<name>`, using the certificate and private key passed:
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -165,47 +248,19 @@ Your private key file needs to be passphraseless. | `/Users/mule/Documents/priva
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-Besides the default `--help` flag, this command also accepts:
+In addition to the default flag `--help`, this command accepts the following flags:
 
-[%header,cols="15a,85a"]
+[%header,cols="30a,40a,30a"]
 |===
-|Flag |Description
-|`--clientCertificate` | Client certificate file
-|`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).
-|`--crl` | Certificate Revocation List file
-|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2
+|Flag |Description| Example
+|`--clientCertificate` | Client certificate file| `--clientCertificate /Users/mule/Documents/CertificateFile.pem`|
+`--crl` | Certificate Revocation List file | `--clientCertificate /Users/mule/Documents/crlFile.pem`
+|`--tlsv1`  | Supports TLSv1 in addition to TLSv1.1 and TLSv1.2 | `--tlsv1`
+|`--verificationMode`  | Specifies the client verification mode. It can be set to `on` (verify always) `off` (don't verify) or `optional` (Verification optional).| `--verificationMode on`
+
 |===
 
 For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.adoc[Configure SSL Endpoints and Certificates].
-
-[[cloudhub-load-balancer-ssl-endpoint-remove]]
-== cloudhub:load-balancer:ssl-endpoint:remove
-
-----
-> cloudhub:load-balancer:ssl-endpoint:remove [flags] <name> <certificateName>
-----
-This command removes the ssl certificate specified in `<certificateName>` from the load balancer specified in `<name>`.
-
-[WARNING]
-This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
-
-This command accepts only the default flag `--help`.
-
-[[cloudhub-load-balancer-ssl-endpoint-set-default]]
-== cloudhub:load-balancer:ssl-endpoint:set-default
-
-----
-> cloudhub:load-balancer:ssl-endpoint:set-default [flags] <name> <certificateName>
-----
-This command sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`. +
-
-Besides the default `--help` flag, this command also accepts:
-
-[%header,cols="30a,70a"]
-|===
-|Flag |Description
-|`--http` | Specifies the Load balancer HTTP behavior
-|===
 
 [[cloudhub-load-balancer-ssl-endpoint-describe]]
 == cloudhub:load-balancer:ssl-endpoint:describe
@@ -213,112 +268,71 @@ Besides the default `--help` flag, this command also accepts:
 ----
 > cloudhub:load-balancer:ssl-endpoint:set-describe [flags] <name> <certificateName>
 ----
-This command shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>`. +
+Shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>` 
 
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
+This command accepts the `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`
 
 This command also accepts the default flag `--help`.
 
-[[cloudhub-load-balancer-allowlist-add]]
-== cloudhub:load-balancer:allowlist:add
+[[cloudhub-load-balancer-ssl-endpoint-remove]]
+== cloudhub:load-balancer:ssl-endpoint:remove
 
 ----
-> cloudhub:load-balancer:allowlist:add [flags] <name> <cidrBlock>
+> cloudhub:load-balancer:ssl-endpoint:remove [flags] <name> <certificateName>
 ----
-This command adds a range of IP addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
-
-[NOTE]
-The allowlist works at the load balancer level, not at the CN certificate level. Make sure you only pass IP addresses formatted in https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation].
-
-This command accepts only the default flag `--help`.
-
-[[cloudhub-load-balancer-allowlist-remove]]
-== cloudhub:load-balancer:allowlist:remove
-
-----
-> cloudhub:load-balancer:allowlist:remove <name> <cidrBlock>
-----
-This command removes an IP or range of IPs addresses specified in `<cidrBlock>` to the allowlist of the load balancer specified in `<name>`.
+Removes the ssl certificate specified in `<certificateName>` from the load balancer specified in `<name>`
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default flag `--help`.
+This command accepts the default flag `--help`.
 
-[[cloudhub-load-balancer-mappings-describe]]
-== cloudhub:load-balancer:mappings:describe
-
-----
-> cloudhub:load-balancer:mappings:describe <name> [certificateName]
-----
-This command lists the mapping rules for the load balancer specified in `<name>`. +
-If no `certificateName` is passed, Anypoint Platform CLI returns the mappings for the default SSL endpoint.
-
-This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
-
-This command also accepts the default flag `--help`.
-
-[[cloudhub-load-balancer-mappings-add]]
-== cloudhub:load-balancer:mappings:add
+[[cloudhub-load-balancer-ssl-endpoint-set-default]]
+== cloudhub:load-balancer:ssl-endpoint:set-default
 
 ----
-> cloudhub:load-balancer:mappings:add [flags] <name> <index> <inputUri> <appName> <appUri> [certificateName]
+> cloudhub:load-balancer:ssl-endpoint:set-default [flags] <name> <certificateName>
 ----
+Sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`
 
-This command adds a proxy mapping rule to the load balancer specified in `<name>` in the CN passed under the `certificateName` flag. +
-If no `certificateName` is passed, Anypoint Platform CLI adds the mappings to the default SSL endpoint.
+In addition to the default flag `--help`, this command accepts the following flags:
 
 
-[%header,cols="12a,68a,20a"]
+[%header,cols="30a,40a,30a"]
 |===
-|Value |Description |Example
-|`name` |Name of the load balancer to which this rule is applied. |`testloadbalancer`
-|`inputUri` |Name of the URI of your input URL |example.com
-|`appName` |Name of the app of your output URL to which the request is forwarded |`{app}-example`
-|`appUri` |URI of the app of your output URL to which the request is forwarded |/
+|Flag |Description| Example
+|`--http` | Specifies the Load balancer HTTP behavior +
+ It can be set to `on` (accepts HTTP requests and forwards it to your configured default `_sslendpoint_`), `off` (refuses all HTTP requests), or `redirect` (redirects to HTTPS) | `--http redirect`
 |===
 
-For the values in the example above, for an input call to `my-superapp.api.example.com/status?limit=10`, the endpoint `my-superapp-example: /status?limit=10` will be called for the application.
 
-This command also has the `--upstreamProtocol` flag.
-The `--upstreamProtocol` flag sets the protocol used by your application to communicate internally with your load balancer. If no upstream protocol is set, HTTP is used as default.
+// == cloudhub:load-balancer:describe-json
 
-[%header,cols="25a,60a"]
-|===
-| Flag | Description
-| `--upstreamProtocol <protocol>` | Look for upstream applications in HTTP port 8091 or HTTPS port 8092.
-Supported Values: `http`, `https`
-| `--certificateName <certificate name>` | Optional flag
-|===
+// ----
+// > cloudhub load-balancer describe [options] <name>
+// ----
+// This command displays a raw JSON response from the load balancer that is specified in `<name>`.
 
-[[cloudhub-load-balancer-mappings-remove]]
-== cloudhub:load-balancer:mappings:remove
+// This command accepts only the default options: `--help` and `-o`/`--output`
+
+[[cloudhub-load-balancer-start]]
+== cloudhub:load-balancer:start
 
 ----
-> cloudhub:load-balancer:mappings:remove [flags] <name> <index> [certificateName]
+> cloudhub:load-balancer:start [flags] <name>
 ----
-This command removes the proxy mapping rules from the load balancer specified in `<name>` at the priority index specified in `<index>` and the CN specified as the `certificateName` flag.
+Starts the load balancer specified in `<name>`
 
-This command accepts only the default flag `--help`.
+This command accepts the default flag `--help`.
 
-If no `certificateName` is passed, Anypoint Platform CLI removes the mappings for the default SSL endpoint.
-
-[[cloudhub-load-balancer-dynamic-ips-enable]]
-== cloudhub:load-balancer:dynamic-ips:enable
+[[cloudhub-load-balancer-stop]]
+== cloudhub:load-balancer:stop
 
 ----
-> cloudhub:load-balancer:dynamic-ips:enable [flags] <name>
+> cloudhub:load-balancer:stop [flags] <name>
 ----
-This command enables dynamic IPs for the load balancer specified in `<name>`.
-This command accepts only the default flag `--help`.
-
-[[cloudhub-load-balancer-dynamic-ips-disable]]
-== cloudhub:load-balancer:dynamic-ips:disable
-
-----
-> cloudhub:load-balancer:dynamic-ips:disable [flags] <name>
-----
-This command disables dynamic IPs for the load balancer specified in `<name>`.
+Stops the load balancer specified in `<name>`
 
 This command accepts only the default flag `--help`.
 
