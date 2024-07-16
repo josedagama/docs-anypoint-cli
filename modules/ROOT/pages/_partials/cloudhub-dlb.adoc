@@ -1,5 +1,6 @@
 = CloudHub Dedicated Load Balancers
 
+Use the `cloudhub:load-balancer` commands to automate your Cloudhub Dedicated LOad Balancers Processes. For more information about how to use these commands, see xref:cloudhub::index.adoc[the CloudHub documentation].
 
 // tag::summary[]
 
