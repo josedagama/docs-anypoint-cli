@@ -19,21 +19,9 @@ WARNING: Anypoint Platform CLI 4.x is not backward compatible. If you are using 
 == Before you begin 
 
 The Anypoint CLI is built with Node.js and is installed by using npm, the package manager for the Node JavaScript platform.
+You must install Anypoint CLI from npm before you can run the commands. 
 
-Versions required are as follows:
-
-* Node.js version 16.0.0 to 18.14.0
-* npm version 7 or later
-
-To install the prerequisite software:
-
-* Download and install Node.js and npm.
-+
-See the https://nodejs.org/en/download/[NodeJS download page].
-
-Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
-
-Then, proceed to <<install.adoc#,Install Anypoint CLI>>.
+For more information, refer to <<install.adoc#,Install Anypoint CLI>>.
 
 include::anypoint-cli::partial$intro.adoc[tag=syntax]
 

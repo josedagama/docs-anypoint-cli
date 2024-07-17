@@ -2,7 +2,6 @@
 * xref:index.adoc[Overview]
 * xref:anypoint-cli-release-notes.adoc[Release Notes]
 * xref:install.adoc[Install Anypoint CLI 4.x]
-* xref:intro.adoc[General Use of Commands and Flags]
 * xref:auth.adoc[Authenticate to Anypoint Platform]
 * xref:proxy.adoc[Use a Proxy Server]
 * xref:diff-earlier-ver.adoc[How Version 4.x Differs from Previous Versions]
