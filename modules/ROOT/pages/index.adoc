@@ -1,14 +1,73 @@
-= Getting Started with Anypoint Platform CLI 4.x
+= Anypoint Platform CLI 4.x Overview
 :page-aliases: runtime-manager::anypoint-platform-cli.adoc
 
 Anypoint Platform CLI is a scripting and command-line tool for Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
+include::anypoint-cli::partial$intro.adoc[tag=usageintro]
+
+With Anypoint CLI 4.x you can:
+* Enhance your workflow efficiency: +
+Streamline your API management and development processes with command-line tools.
+* ENsure consistency across environments and organizations: +
+Apply consistent configurations and policies across different organizations and environments, ensuring stability and reliability in your operations.
+* Manage your applications effectively: +
+Perform a wide range of operations on your APIs and applications, from deployment to monitoring, all from the command line.
+
+
 WARNING: Anypoint Platform CLI 4.x is not backward compatible. If you are using a version of Anypoint CLI earlier than Anypoint CLI 4.x, xref:diff-earlier-ver.adoc[read this first to find out about the differences.]
 
-To get started with Anypoint CLI: 
+== Before you begin 
 
+The Anypoint CLI is built with Node.js and is installed by using npm, the package manager for the Node JavaScript platform.
+
+Versions required are as follows:
+
+* Node.js version 16.0.0 to 18.14.0
+* npm version 7 or later
+
+To install the prerequisite software:
+
+* Download and install Node.js and npm.
++
+See the https://nodejs.org/en/download/[NodeJS download page].
+
+Depending on the configuration of your system, you might need to log in using administrator credentials before you can successfully run the npm commands.
+
+Then, proceed to <<install.adoc#,Install Anypoint CLI>>.
+
+include::anypoint-cli::partial$intro.adoc[tag=syntax]
+
+[[default-options]]
+== Default Flags
+
+Anypoint Platform CLI commands have the following default flags:
+
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Flag|Description
+|`--help` | Displays command usage information
+| `--organization` | Your organization within Anypoint Platform
+
+You can also pass this value using the environment variable `export ANYPOINT_ORG=<name>`.
+
+| `--environment` | Your Anypoint Platform environment
+
+You can also pass this value using the environment variable `export ANYPOINT_ENV=<name>`.
+
+| `--host` | The host of your Anypoint Platform Installation +
+This value defaults to `anypoint.mulesoft.com`. +
+
+* If you are using Anypoint Platform PCE, pass the address where you are hosting the platform.
+* If you are using Anypoint Platform EU Cloud, pass your EU control plane URL.
+
+You can also pass this value using a dedicated environment variable `ANYPOINT_HOST=<name>`. For example, `ANYPOINT_HOST=my.anypoint.mulesoft.com`.
+
+|===
+
+
+== See also
 . <<install.adoc#,Install>> Anypoint CLI.
-. <<intro.adoc#,Learn the general use of the commands>>, including how to authenticate and optionally use a proxy.
-. <<anypoint-platform-cli-commands.adoc#,View the list of commands>> available for the Anypoint Platform actions you can execute using Anypoint CLI.
+. <<intro.adoc#,Learn the general use of the commands>>.
 . xref:auth.adoc[Authenticate to Anypoint Platform].
+. <<anypoint-platform-cli-commands.adoc#,View the list of commands>> available for the Anypoint Platform actions you can execute using Anypoint CLI.
 . xref:proxy.adoc[Use a Proxy Server].
