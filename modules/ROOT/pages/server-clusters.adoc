@@ -1,5 +1,7 @@
 = CLI for Local Cluster Servers
 
+Use the `cluster` commands to automate your Local Cluster Servers Processes. For more information about how to use these commands, refer to xref:runtime-manager::index.adoc[the Runtime Manager documentation].
+
 include::anypoint-cli::partial$server-clusters.adoc[tag=summary]
 
 include::anypoint-cli::partial$server-clusters.adoc[tag=commands]
