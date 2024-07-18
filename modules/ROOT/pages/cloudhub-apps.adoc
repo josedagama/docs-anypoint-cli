@@ -1,5 +1,7 @@
 = CLI for CloudHub Applications
 
+Use the `cloudhub` commands to automate your CloudHub Applications Processes. For more information about how to use these commands, refer to xref:cloudhub::index.adoc[the CloudHub documentation].
+
 include::anypoint-cli::partial$cloudhub-apps.adoc[tag=summary]
 
 include::anypoint-cli::partial$cloudhub-apps.adoc[tag=commands]
