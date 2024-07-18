@@ -99,21 +99,26 @@ Connected Apps require the `View Organization` and `View Environment` scopes to 
 ====
 
 [[command-line-parameters]]
-== Command-Line Parameters
+== Command-Line Parameters and Environment Variables
 
-You can authenticate to Anypoint Platform through command-line by running the `anypoint-cli-v4` command with a combination of the following parameters:
+You can authenticate to Anypoint Platform through the command line by running the `anypoint-cli-v4` command with a combination of parameters, or by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
 
-----
---username
---password
---client_id
---client_secret
---bearer
---organization
---environment
-----
+[%header%autowidth.spread,cols="a,a"]
+|===
+|Command-Line Parameters|Environment Variables
+|`--username` | `ANYPOINT_USERNAME`
+| `--password` | `ANYPOINT_PASSWORD`
+|`--client_id`| `ANYPOINT_CLIENT_ID`
+|`--client_secret`| `ANYPOINT_CLIENT_SECRET`
+|`--bearer`| -
+|`--organization`| `ANYPOINT_ORG`
+|`--environment`| `ANYPOINT_ENV`
+| - | `ANYPOINT_CERTIFICATE`
+| - | `ANYPOINT_HOST`
+|===
 
 NOTE: The `--organization` flag is optional. It defaults to your main organization from Anypoint Platform.
+
 *Examples:*
 
 * Authenticate on the command line using username and password
@@ -140,24 +145,6 @@ Your Anypoint Platform session expires when the bearer token expires.
 +
 For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to Generate Your Authorization Bearer Token for Anypoint Platform].
 
-[[env-variables]]
-== Environment Variables
-
-You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
-
-----
-ANYPOINT_USERNAME
-ANYPOINT_PASSWORD
-ANYPOINT_CLIENT_ID
-ANYPOINT_CLIENT_SECRET
-ANYPOINT_ORG
-ANYPOINT_ENV
-ANYPOINT_HOST
-ANYPOINT_CERTIFICATE
-----
-
-*Examples:*
-
 * Authenticate by setting the environment variables for username and password
 +
 ----
@@ -175,3 +162,4 @@ $ export ANYPOINT_CLIENT_SECRET=myCLientSecret
 $ export ANYPOINT_ORG=myOrgId
 $ anypoint-cli-v4 account:environment:list
 ----
+
