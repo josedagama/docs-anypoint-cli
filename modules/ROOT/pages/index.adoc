@@ -8,7 +8,7 @@ include::anypoint-cli::partial$intro.adoc[tag=usageintro]
 With Anypoint CLI 4.x you can:
 * Enhance your workflow efficiency: +
 Streamline your API management and development processes with command-line tools.
-* ENsure consistency across environments and organizations: +
+* Ensure consistency across environments and organizations: +
 Apply consistent configurations and policies across different organizations and environments, ensuring stability and reliability in your operations.
 * Manage your applications effectively: +
 Perform a wide range of operations on your APIs and applications, from deployment to monitoring, all from the command line.
