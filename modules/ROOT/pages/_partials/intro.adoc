@@ -26,7 +26,7 @@ When using multi-option flags in a command, either put the parameter before the 
 anypoint-cli-v4 governance:api:validate param1 param2 --rulesets value1 --rulesets value2 --rulesets value3 
 ----
 
-Or use a `-- ` (two dashes followed by a space) before the parameter:
+Or use a `--` (two dashes followed by a space) before the parameter:
 
 [source,console]
 ----
