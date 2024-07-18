@@ -6,6 +6,7 @@ Anypoint Platform CLI is a scripting and command-line tool for Anypoint Platform
 include::anypoint-cli::partial$intro.adoc[tag=usageintro]
 
 With Anypoint CLI 4.x you can:
+
 * Enhance your workflow efficiency: +
 Streamline your API management and development processes with command-line tools.
 * Ensure consistency across environments and organizations: +
