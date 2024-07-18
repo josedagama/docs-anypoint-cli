@@ -101,7 +101,7 @@ Connected Apps require the `View Organization` and `View Environment` scopes to 
 [[command-line-parameters]]
 == Command-Line Parameters and Environment Variables
 
-You can authenticate to Anypoint Platform through command-line by running the `anypoint-cli-v4` command with a combination of parameters, or by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
+You can authenticate to Anypoint Platform through the command line by running the `anypoint-cli-v4` command with a combination of parameters, or by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
