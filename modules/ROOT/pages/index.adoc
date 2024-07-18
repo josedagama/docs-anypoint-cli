@@ -75,7 +75,7 @@ For information about Root Organization settings, see xref:access-management::or
 [[data-collection]]
 == Anonymized Usage Data
 
-To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
+To improve the Anypoint CLI experience, MuleSoft gathers anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
 
 == See also
 . <<install.adoc#,Install>> Anypoint CLI.
