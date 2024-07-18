@@ -1,5 +1,7 @@
 = CLI for CloudHub Dedicated Load Balancers
 
+Use the `cloudhub:load-balancer` commands to automate your CloudHub Dedicated Load Balancers Processes. For more information about how to use these commands, refer to xref:cloudhub::index.adoc[the CloudHub documentation].
+
 include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=summary]
 
 include::anypoint-cli::partial$cloudhub-dlb.adoc[tag=commands]

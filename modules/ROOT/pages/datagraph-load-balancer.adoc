@@ -1,5 +1,7 @@
 = CLI for DataGraph Load Balancers
 
+Use the `datagraph` commands to automate your DataGraph Load Balancers Processes. For more information about how to use these commands, refer to xref:datagraph::index.adoc[the DataGraph documentation].
+
 include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary]
 
 include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=commands]
