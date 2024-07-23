@@ -62,6 +62,7 @@ Pass this flag multiple times to specify multiple emails. | `--email example@mul
 | `--enabled` | Sets whether the alert is enabled. Include the flag to enable the alert. | `--enabled`
 | `--operator` | Condition operator that explains values in relation to threshold. +
 Supported values: `gt`, `lt`, `eq`. | `--operator gt`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 | `--periods` | Number of consecutive periods condition should occur for. | `--periods 34`
 | `--policyId` | ID of a policy applied to the API instance that triggers a `policy-violation` alert type. | `--policyId http-basic-authentication`
 | `--recipient` | Username to send alert notification to. +
@@ -128,7 +129,9 @@ Supported values are `table` (default) and `json` | `--output table`
 
 Changes the asset version for the API instance passed in `<apiInstanceId>` by choosing a new version from Exchange passed in `<assetVersion>`.
 
-This command accepts the default flag `--help`.
+
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
@@ -139,7 +142,8 @@ This command accepts the default flag `--help`.
 
 Classifies the API instance passed in `<apiInstanceId>` in the environment passed in `<destEnvName>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
@@ -150,7 +154,8 @@ This command accepts the default flag `--help`.
 
 Deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting it.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
@@ -195,6 +200,8 @@ This flag only works if the target flag was set as `RTF`, `CH`, or `CH2`
 | `--overwrite`
 | Update application if it exists +
 Include the flag to enable it | `--overwrite`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+
 
 | `--target`
 | Hybrid, RTF, CH, or CH2 deployment target ID
@@ -211,7 +218,8 @@ Include the flag to enable it | `--overwrite`
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
@@ -222,7 +230,8 @@ This command accepts the default flag `--help`.
 
 Shows details of the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
@@ -235,6 +244,9 @@ This command downloads the API proxy ZIP file of the API instance passed in `<ap
 
 In addition to the default flag `--help`, this command accepts the `--gatewayVersion` flag to specify the gateway version to download.
 For example: `api-mgr:api:download-proxy --gatewayVersion: 4.0.1  643404 /tmp/`
+This command also accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
+
 
 [[api-mgr-api-edit]]
 == api-mgr:api:edit
@@ -286,9 +298,10 @@ Supply the `--inboundSecretGroupId` of the TLS Context's secret group. To remove
 | `--outboundSecretGroupId`
 | Outbound secret group ID. | `--outboundSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
-| `--outboundTlsContextId `
+| `--outboundTlsContextId`
 | Outbound TLS Context ID. +
 Supply the `--outboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`. | `--outboundTlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 
 | `--path`
 | Proxy path (required)| `--path /http://localhost:3000`
@@ -345,6 +358,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 | `--instanceLabel` | API instance label that filters results |`--instanceLabel exampleLabel`
 | `--limit`           | Number of results to retrieve | `--limit 50` 
 | `--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 | `--sort` | Sorts the results in the field name passed | `--sort "Latest Version"` 
 |===
 
@@ -407,9 +421,10 @@ Supply the `--inboundSecretGroupId` of the TLS Context's secret group. To remove
 | `--outboundSecretGroupId`
 | Outbound secret group ID. | `--outboundSecretGroupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
 
-| `--outboundTlsContextId `
+| `--outboundTlsContextId`
 | Outbound TLS Context ID. +
 Supply the `--outboundSecretGroupId` of the TLS Context's secret group. To remove a TLS Context, apply the flag with the following value: `--outboundTlsContextId "null"`. | `--outboundTlsContextId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 
 | `--path`
 | Proxy path (required)| `--path /http://localhost:3000`
@@ -474,6 +489,8 @@ Include the flag to enable it | `--copyPolicies`
 | `-t, --copyTiers`
 |Indicates whether to copy tiers +
 Include the flag to enable it | `--copyTiers`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+
 | `--providerId` | Indicates the provider's ID associated with the API. | `--providerId 1787c36ab544466698e380131040faad`
 |===
 
@@ -507,14 +524,15 @@ Include to redeploy APIs from unclassified environments | `--environmentName mul
 This flag only works if the target flag was set as `RTF`, `CH`, or `CH2`
 | `--javaVersion 17 643404`
 
-| `--releaseChannel`
-| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS` +
-This flag only works if the target flag was set as `RTF`, `CH`, or `CH2`
-| `--releaseChannel EDGE 643404`
 
 | `--overwrite`
 | Update application if it exists +
 Include the flag to enable it | `--overwrite`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+| `--releaseChannel`
+| Set the name of the release channel to be used for the selected Mule version. + Supported values are `NONE`, `EDGE`, and `LTS` +
+This flag only works if the target flag was set as `RTF`, `CH`, or `CH2`
+| `--releaseChannel EDGE 643404`
 
 | `--target`
 | Hybrid, RTF, CH, or CH2 deployment target ID 
@@ -531,7 +549,8 @@ Include the flag to enable it | `--overwrite`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -542,7 +561,8 @@ This command accepts the default flag `--help`.
 
 This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
@@ -561,10 +581,10 @@ In addition to the default flag `--help`, this command accepts the following fla
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description |Example
-|`--limit <value>` | Number of results to retrieve | `--limit 2`
-|`--offset <value>` | Offsets the amount of APIs passed | `--offset 3`
-| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
-|`--sort <value>` | Sorts the contracts by the criteria associated with their client applications, supported values are `createdDate`, `id`, and `name` | `--sort id` 
+|`--limit` | Number of results to retrieve | `--limit 2`
+|`--offset` | Offsets the amount of APIs passed | `--offset 3`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+|`--sort` | Sorts the contracts by the criteria associated with their client applications, supported values are `createdDate`, `id`, and `name` | `--sort id` 
 |===
 [[api-mgr-policy-apply]]
 == api-mgr:policy:apply
@@ -591,7 +611,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 | `--groupId`
 | Mule 4 policy group ID +
 This value defaults to the MuleSoft group ID. | `--groupId 1fec0a49-1551-4199-bfcc-cf0352d0f29d`
-
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 | `-p, --pointcut [dataJSON]`
 | Pass pointcut data as JSON strings |
 `--pointcut '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
@@ -651,7 +671,8 @@ Supported values are `table` (default) and `json`. | `--output json`
 
 Disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
@@ -667,9 +688,13 @@ In addition to the default flag `--help`, this command accepts the following fla
 [%header%autowidth.spread,cols="a,a,a"]
 |===
 |Flag |Description| Example
-| `-c, --config
+| `-c`, `--config`
 | Pass the configuration data as a JSON string |
---config '{\"username\":\"user\",\"password\":\"teste\"}'`
+`--config '{\"username\":\"user\",\"password\":\"teste\"}'`
+| `--configFile`
+| Pass the configuration data as a file |
+`--configFile ./config.json`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 | `-p, --pointcut`
 | Pass pointcut data as JSON strings |
 `-p '[{"methodRegex":"GET\|PUT","uriTemplateRegex":"/users*"}]'`
@@ -684,7 +709,8 @@ In addition to the default flag `--help`, this command accepts the following fla
 
 Enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
@@ -707,7 +733,8 @@ In addition to the default flag `--help`, this command accepts the `-m, --muleVe
 
 This command removes the policy specified in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
@@ -752,6 +779,7 @@ Include the flag to enable it | `--autoApprove`
 [TIP]
 To create multiple limits, you can provide multiple `--limit` options. +
 For example: `-l true,100,sec -l false,20,min`.
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 
 
 |===
@@ -765,7 +793,8 @@ For example: `-l true,100,sec -l false,20,min`.
 
 Copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
@@ -776,7 +805,8 @@ This command accepts the default flag `--help`.
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-This command accepts the default flag `--help`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
+Supported values are `table` (default) and `json`.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list
@@ -793,7 +823,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 |Flag |Description | Example
 |`--limit` | Number of results to retrieve | `--limit 2`
 |`--offset` | Offsets the amount of APIs passed | `--offset 3`
-| `--output <value>` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
+| `--output` | Specifies the response format, supported values are `table` (default) and `json` |  `--output json`
 |`--sort` | Sorts the results in the field name passed | `--sort "Latest Version"`
 |===
 
