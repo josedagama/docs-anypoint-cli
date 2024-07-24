@@ -126,8 +126,7 @@ Displays information about the load balancer that is specified in `<name>` +
 Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>` +
 It displays load balancer's name, domain, its state and the Anypoint VPC Id to which the load balancer is bound.
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`. 
 
@@ -161,8 +160,7 @@ This command accepts the default flag `--help`.
 Lists all load balancers in your Anypoint Platform +
 It displays load balancer's name, domain, its state, and the Anypoint VPC ID to which the load balancer is bound.
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -209,8 +207,7 @@ Supported Values: `http`, `https` | `--upstreamProtocol http`
 Lists the mapping rules for the load balancer specified in `<name>` +
 If no `certificateName` is passed, Anypoint Platform CLI returns the mappings for the default SSL endpoint.
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -268,8 +265,7 @@ For more configuration information, see xref:runtime-manager::lb-ssl-endpoints.a
 ----
 Shows information about the configuration of the load balancer passed in `<name>` for the the certificate specified in `<certificateName>` 
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
