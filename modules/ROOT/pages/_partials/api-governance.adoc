@@ -28,7 +28,7 @@
 
 `> governance:api:evaluate [flags]`
 
-This command evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
+Evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
 Besides the default flags, this command also accepts:
 
@@ -37,7 +37,7 @@ Besides the default flags, this command also accepts:
 |Flag |Description
 |`--api=<api>`
 |The API project against which you want to evaluate. The command uses the criteria in the project's `exchange.json` file.
-|--criteria <filtertype:filtervalue>,...
+|`--criteria <filtertype:filtervalue>,...`
 |Enables you to apply filters against which to evaluate to identify rulesets. Specify a list of comma-separated filters where each filter has a type and value in the format `filtertype:filtervalue`. 
 
 Available filters include:
@@ -86,7 +86,7 @@ where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file
 
 `> governance:api:inspect [flags] <api-specification>`
 
-This command inspects the API specification passed in `api-specification` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance-ruleset-init>>.
+Inspects the API specification passed in `api-specification` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance-ruleset-init>>.
 
 This command accepts only the default flags.
 
@@ -148,7 +148,7 @@ types:
 
 `> governance:api:validate <api-specification> [flags]`
 
-This command validates the API specification passed in `api-specification` against specified rulesets. 
+Validates the API specification passed in `api-specification` against specified rulesets. 
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
@@ -261,7 +261,7 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 
 `> governance:document [flags] <ruleset> <doc-file>`
 
-This command creates the documentation for the API Governance ruleset definition ZIP file specified in `ruleset`. It puts the documentation in the `doc-file` ZIP file for you to upload and publish to Exchange. 
+Creates the documentation for the API Governance ruleset definition ZIP file specified in `ruleset`. It puts the documentation in the `doc-file` ZIP file for you to upload and publish to Exchange. 
 
 This command accepts only the default flags.
 
@@ -302,7 +302,7 @@ Saving to myRulesetFolder/ruleset.doc.zip
 
 `> governance:profile:create [flags] <profile-name> <ruleset-asset-identifiers>`
 
-This command creates an active governance profile using a string value for the new governance profile name specified in `profile-name`. 
+Creates an active governance profile using a string value for the new governance profile name specified in `profile-name`. 
 
 You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset asset identifiers, each of which is the group ID, asset ID, and version (GAV) that uniquely identifies each asset in Exchange. For example: `<group_id>/<asset_id>/<version>,<group_id>/<asset_id>/<version>`, where `<version>` is a specific version or `latest`. If you use `latest` as the version, the profile automatically uses the latest version of the ruleset when versions are published after you create the profile. See <<exchange-asset-identifiers>>.
 
@@ -377,7 +377,7 @@ anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-
 
 `> governance:profile:delete [flags] <profile-id>`
 
-This command deletes a specific governance profile specified by `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
+Deletes a specific governance profile specified by `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
 The `governance:profile:delete` command accepts only the default flags.
 
@@ -403,7 +403,7 @@ anypoint-cli-v4 governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 
 `> governance:profile:info [flags] <profile-id>`
 
-This command lists all information for a governance profile ID.
+Lists all information for a governance profile ID
 
 Besides the default flags, this command also accepts:
 
@@ -444,7 +444,7 @@ NotificationConfig  Contact,Publisher
 
 `> governance:profile:list [flags]`
 
-This command lists information for all governance profiles for an organization. You need this information when updating a governance profile.
+Lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
 Besides the default flags, this command also accepts:
 
@@ -483,7 +483,7 @@ OAS Standards                	51ae8795-2278-407e-942f-becba29af986
 
 `> governance:profile:update [flags] <profile-id>`
 
-This command updates the governance profile specified in `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
+Updates the governance profile specified in `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
 You can update the governance profile's
 general information, rulesets, filter criteria, and notification configuration. You can use one of the `notify` flags to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a `notify` flag, no changes are made to the notification configuration. 
@@ -565,7 +565,7 @@ anypoint-cli-v4 governance profile update 19fb211b-8775-43cc-865a-46228921d6ed -
 
 `> governance:ruleset:clone [flags] <ruleset> <new_title> <new_description>` 
 
-This command clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the flags. The new ruleset is written to standard output.
+Clones a governance ruleset to create a new custom ruleset and applies specified updates to rules based on the flags. The new ruleset is written to standard output.
 
 The `new-title` parameter gives the title for the new ruleset.
 
@@ -616,7 +616,7 @@ anypoint-cli-v4 governance:ruleset:clone 68ef9520-24e9-4cf2-b2f5-620025690913/an
 
 `> governance:ruleset:info <governance-ruleset> [flags]`
 
-This command lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
+Lists the ruleset rules in the ruleset definition passed in the `governance-ruleset` parameter. 
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
@@ -692,7 +692,7 @@ Ruleset conforms with Dialect
 
 `> governance:ruleset:init [flags] <schema>`
 
-This command initializes a ruleset based on the data schema passed in the `schema` parameter. 
+Initializes a ruleset based on the data schema passed in the `schema` parameter. 
 
 Besides the default flags, this command also accepts:
 
@@ -723,7 +723,7 @@ anypoint-cli-v4 governance:ruleset:init --types patientmultipleBirthBoolean,pati
 
 `> governance:ruleset:validate [flags] <governance-ruleset>`
 
-This command validates the ruleset definitions passed using the `governance-ruleset` parameter. You can pass one of the following as the `governance-ruleset` parameter:
+Validates the ruleset definitions passed using the `governance-ruleset` parameter. You can pass one of the following as the `governance-ruleset` parameter:
 
 * A ruleset definition YAML file  
 * A ZIP file that contains an API project with an `exchange.json` file that specifies the ruleset as the main file

@@ -40,8 +40,7 @@
 
 Describes the history of the alarm passed in `<name>`
 
-This command accepts the `--output` flag to specify the response format. +
- Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -53,8 +52,7 @@ This command accepts the default flag `--help`.
 ----
 Lists all alerts associated with your current environment
 
-This command has the `--output` flag to specify the response format. +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -196,8 +194,7 @@ Displays information on the application you pass in `<name>` +
 Use the flag `-o json` to get the raw JSON response of the application you specify in `<name>`. +
 The command returns data such as the application's domain, its status, the last time it was updated, the Mule version, the ZIP file name, the region, monitoring, and workers; as well as `TRUE` or `FALSE` information for persistent queues and static IPs enablement.
 
-This command accepts the `--output` flag to specify the response format +
- Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -221,8 +218,7 @@ Contrarily to what you see in the UI, the logs you download from the CLI won't s
 Lists all applications available in your Anypoint Platform CLI +
 It returns your application name, its status, the number of vCores assigned and the last time it was updated.
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -295,8 +291,7 @@ This command accepts the default flag `--help`.
 
 Lists all supported regions
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
