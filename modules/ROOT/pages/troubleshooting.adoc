@@ -2,6 +2,6 @@
 
 If you encounter errors when attempting to run Anypoint CLI commands, troubleshoot them as follows.
 
-include::api-governance-documentation::partial$cli-commands-troubleshoot.adoc[tag=before]
+include::api-governance::partial$cli-commands-troubleshoot.adoc[tag=before]
 
-include::api-governance-documentation::partial$cli-commands-troubleshoot.adoc[tag=errors]
+include::api-governance::partial$cli-commands-troubleshoot.adoc[tag=errors]
