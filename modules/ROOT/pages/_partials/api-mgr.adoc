@@ -130,8 +130,7 @@ Supported values are `table` (default) and `json` | `--output table`
 Changes the asset version for the API instance passed in `<apiInstanceId>` by choosing a new version from Exchange passed in `<assetVersion>`.
 
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-classify]]
 == api-mgr:api:classify
@@ -142,8 +141,7 @@ Supported values are `table` (default) and `json`.
 
 Classifies the API instance passed in `<apiInstanceId>` in the environment passed in `<destEnvName>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-delete]]
 == api-mgr:api:delete
@@ -154,8 +152,7 @@ Supported values are `table` (default) and `json`.
 
 Deletes the API instance passed in `<apiInstanceId>`. If the API instance is deployed, this command undeploys the API instance before deleting it.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-deploy]]
 == api-mgr:api:deploy
@@ -218,8 +215,7 @@ Include the flag to enable it | `--overwrite`
 
 Deprecates the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-describe]]
 == api-mgr:api:describe
@@ -230,8 +226,7 @@ Supported values are `table` (default) and `json`.
 
 Shows details of the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-api-download-proxy]]
 == api-mgr:api:download-proxy
@@ -549,8 +544,8 @@ This flag only works if the target flag was set as `RTF`, `CH`, or `CH2`
 
 Undeprecates the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this commands accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
+
 
 [[api-mgr-contract-delete]]
 == api-mgr:contract:delete
@@ -561,8 +556,7 @@ Supported values are `table` (default) and `json`.
 
 This command deletes the contract between the API instance passed in `<apiInstanceId>`, and the client passed in `<clientId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-contract-list]]
 == api-mgr:contract:list
@@ -671,8 +665,7 @@ Supported values are `table` (default) and `json`. | `--output json`
 
 Disables the policy passed in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-policy-edit]]
 == api-mgr:policy:edit
@@ -709,8 +702,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 
 Enables the policy passed in `<policyInstanceId>` for the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-policy-list]]
 == api-mgr:policy:list
@@ -733,8 +725,7 @@ In addition to the default flag `--help`, this command accepts the `-m, --muleVe
 
 This command removes the policy specified in `<policyInstanceId>` from the API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-tier-add]]
 == api-mgr:tier:add
@@ -793,8 +784,7 @@ For example: `-l true,100,sec -l false,20,min`.
 
 Copies the SLA tier from the API instance passed in `<sourceAPIInstanceId>` to the API instance Id passed in `<targetAPIInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-tier-delete]]
 == api-mgr:tier:delete
@@ -805,8 +795,7 @@ Supported values are `table` (default) and `json`.
 
 This command deletes the SLA tier passed in `<tierId>` from API instance passed in `<apiInstanceId>`.
 
-In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+In addition to the default flag `--help`, this command accepts the  `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 [[api-mgr-tier-list]]
 == api-mgr:tier:list

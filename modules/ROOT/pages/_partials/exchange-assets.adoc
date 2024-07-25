@@ -101,7 +101,7 @@ Describes the asset passed in `<assetIdentifier>`
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
+This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -245,7 +245,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 [NOTE]
 This command only supports published pages.
 
-This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`
+This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 

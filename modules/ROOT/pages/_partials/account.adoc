@@ -42,8 +42,7 @@ If your business group or organization name contains spaces, enclose its name be
 
 Returns the business group owner, type, subscription information, the entitlements of the group and in which environment is running.
 
-Use the `--output` flag to specify the response format. +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -56,8 +55,7 @@ This command accepts the default flag `--help`.
 
 Displays all xref:access-management::business-groups.adoc[business groups]. It returns the name of the business group, the type ('Master' or 'Business unit'), and the ID.
 
-Use the `--output` flag to specify the response format. +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -77,8 +75,7 @@ Supported values for environment types are:
 
 If no type is specified, the command creates a sandbox environment.
 
-Use the `--output` flag to specify the response format. +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -105,8 +102,7 @@ This command accepts only the default flag `--help`.
 Returns information about the environment specified in `<name>` +
 If no `<name>` is provided, this command returns information about the current session's environment.
 
-Use the `--output` flag to specify the response format. +
-Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -119,8 +115,7 @@ This command accepts the default flag `--help`.
 ----
 Lists all your environments in Anypoint Platform. It returns your environment name, Id and whether it's sandboxed or not. 
 
-Use the `--output` flag to specify the response format. +
- Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -134,8 +129,7 @@ This command accepts the default flag `--help`.
 
 Returns your account information, including your username, your full name, your email address, and the creation date of your account. 
 
-Use the `--output` flag to specify the response format. +
- Supported values are `table` (default) and `json`
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 

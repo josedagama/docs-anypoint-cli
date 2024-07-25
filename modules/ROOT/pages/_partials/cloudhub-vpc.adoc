@@ -63,8 +63,7 @@ An Anypoint VPC needs to be bound to a business group within your organization. 
 
 This command accepts  the `--default` flag. When passed, the Anypoint VPC is created as the default Anypoint VPC for the selected environment.
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -90,8 +89,7 @@ This command accepts the default flag `--help`.
 ----
 Displays information about the Anypoint VPC that is specified in `<name>`
 
-This command accepts the `--output flag to specify the response format +
- Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command accepts the default flag `--help`.
 
@@ -191,8 +189,7 @@ This command accepts the default flag `--help`.
 ----
 Describes all the firewall rules for the Anypoint VPC defined in `<vpc>`
 
-This command accepts the `--output` flag to specify the response format +
-Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
 This command also accepts the default flag `--help`.
 
@@ -215,9 +212,9 @@ This command accepts the default flag `--help`.
 Lists all available Anypoint VPCs +
 It returns ID, region, and environment of the network and whether it is the default Anypoint VPC or not.
 
-This command accepts the `--output` flag to specify the response format +
- Supported values are `table` (default) and `json`.
+Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
+This command also accepts the default flag `--help`.
 
 
 
