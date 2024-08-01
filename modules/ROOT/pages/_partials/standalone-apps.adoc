@@ -61,6 +61,9 @@ If the Anypoint Platform CLI is using the QA environment in the Services organiz
 [NOTE]
 Running this command requires for your user to have read/write access to the `/tmp` directory of the OS where the CLI is installed.
 
+[WARNING]
+It isn't possible to copy applications that have the same name but different targets within the same organization and environment. This can only be done through the UI.
+
 This command accepts only the default flag `--help`.
 
 [[runtime-mgr-standalone-application-delete]]
