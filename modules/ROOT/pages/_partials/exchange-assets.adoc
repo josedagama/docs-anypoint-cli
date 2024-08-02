@@ -46,8 +46,7 @@ Copies the Exchange asset from `<source>` to `<target>` +
 Arguments `<source>` and `<target>` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the default flag `--help`, this command accepts the following flags:
-
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -86,8 +85,7 @@ Deprecates the asset passed in `<assetIdentifier>`
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-This command accepts the default flag `--help`.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-describe]]
 == exchange:asset:describe
@@ -103,8 +101,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-download]]
 == exchange:asset:download
@@ -117,8 +114,7 @@ Downloads the Exchange asset identified with `<assetIdentifier>` to the director
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-This command accepts the default flag `--help`.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-list]]
 == exchange:asset:list
@@ -132,7 +128,7 @@ Lists all assets in Exchange
 [TIP]
 You can specify keywords in searchText to limit results to APIs containing those specific keywords.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -156,7 +152,7 @@ Modifies the Exchange asset identified with `<assetIdentifier>` +
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -177,7 +173,7 @@ Modifies the mutable data of an already created asset, including tags, categorie
 Argument `assetIdentifier` should be formatted as follows: `[_<groupID>_]/_<assetID>_/_<version>_` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="40a,30a,30a"]
 |===
@@ -210,7 +206,7 @@ This command only supports published pages.
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID 
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-page-download]]
 == exchange:asset:page:download
@@ -229,7 +225,7 @@ Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_
 If `group_id` is not specified, it defaults to the currently selected Organization ID +
 The description page is downloaded in Markdown format.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-page-list]]
 == exchange:asset:page:list
@@ -247,7 +243,7 @@ This command only supports published pages.
 
 This command accepts the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-page-modify]]
 == exchange:asset:page:modify
@@ -266,7 +262,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 This command accepts the `--name` flag to set a new asset page name.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-page-update]]
 == exchange:asset:page:update
@@ -284,7 +280,7 @@ This command publishes all active drafts as part of the operation.
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID 
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[exchange-asset-page-upload]]
@@ -303,7 +299,7 @@ This command publishes all active drafts as part of the operation.
 Argument `assetIdentifier` should be formatted as follows: `[group_id]/<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID 
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-resource-delete]]
 == exchange:asset:resource:delete
@@ -323,7 +319,7 @@ You can list all published resources using the <<exchange-asset-resource-list,as
 [CAUTION]
 This command publishes all active drafts as part of the operation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-resource-download]]
 == exchange:asset:resource:download
@@ -343,7 +339,7 @@ You can list all published resources using the <<exchange-asset-resource-list,as
 [NOTE]
 This command only supports published resources.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-resource-list]]
 == exchange:asset:resource:list
@@ -364,7 +360,7 @@ This command accepts the `--draft` flag to list non-published resources in the a
 
 Prompt the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-resource-upload]]
 == exchange:asset:resource:upload
@@ -383,7 +379,7 @@ If `group_id` is not specified, it defaults to the currently selected Organizati
 
 The successful output command will be a markdown codesnippet.
 
-This command accepts  the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-undeprecate]]
 == exchange:asset:undeprecate
@@ -397,7 +393,7 @@ Undeprecates the asset passed in `<assetIdentifier>`
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[exchange-asset-updateStatus]]
 == exchange:asset:updateStatus
@@ -411,8 +407,7 @@ Modifies the status of an already created asset
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the default flag `--help`, this command accepts the following flags:
-
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="40a,30a,30a"]
 |===
@@ -453,8 +448,7 @@ Uploads a rest-api, soap-api, http-api, raml-fragment, custom, app, template, ex
 Argument `assetIdentifier` should be formatted as follows: `([group_id]/)<asset_id>/<version>` +
 If `group_id` is not specified, it defaults to the currently selected Organization ID
 
-In addition to the default flag `--help`, this command accepts the following flags:
-
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,60a,40a"]
 |===
