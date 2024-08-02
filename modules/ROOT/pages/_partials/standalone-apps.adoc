@@ -34,7 +34,7 @@ CAUTION: For the Anypoint Platform CLI to recognize your target servers, each se
 Downloads the application artifact of the `identifier` application, to the directory passed in `directory`.
 The `identifier` flag can be either an application ID or name.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-standalone-application-copy]]
 == runtime-mgr:standalone-application:copy
@@ -64,7 +64,7 @@ Running this command requires for your user to have read/write access to the `/t
 [WARNING]
 It isn't possible to copy applications that have the same name but different targets within the same organization and environment. This can only be done through the UI.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-standalone-application-delete]]
 == runtime-mgr:standalone-application:delete
@@ -75,7 +75,7 @@ This command accepts only the default flag `--help`.
 
 Deletes the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
@@ -93,7 +93,7 @@ The `targetIdentifier` flag can be either a target ID or name.
 
 A target can be either a server, server group, or cluster.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 To redeploy an app and set a logging level or turn on Insight event tracking, see <<runtime-mgr-standalone-application-modify>>.
 
@@ -110,7 +110,7 @@ Use the flag `-o json` to get the raw JSON response of the application you speci
 
 This command accepts the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 // == runtime-mgr:standalone-application:describe-json
@@ -131,7 +131,7 @@ This command also accepts the default flag `--help`.
 
 Lists all standalone (on-premises) applications.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header%autowidth.spread,cols="a,a,a"]
 |===
@@ -155,7 +155,7 @@ The `identifier` option specifies the application identifier.
 To retrieve the identifier, see
 <<runtime-mgr-standalone-application-list>>.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -178,7 +178,7 @@ To set multiple logging levels, provide multiple `--log` flags. |  `--log INFO:o
 
 Restarts the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-standalone-application-start]]
 == runtime-mgr:standalone-application:start
@@ -189,7 +189,7 @@ This command accepts only the default flag `--help`.
 
 Starts the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-standalone-application-stop]]
 == runtime-mgr:standalone-application:stop
@@ -200,7 +200,7 @@ This command accepts only the default flag `--help`.
 
 Stops the standalone (on-premises) application passed in `identifier`.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 // end::commands[]

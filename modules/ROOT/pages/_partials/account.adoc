@@ -44,7 +44,7 @@ Returns the business group owner, type, subscription information, the entitlemen
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[account-business-group-list]]
 == account:business-group:list
@@ -57,7 +57,7 @@ Displays all xref:access-management::business-groups.adoc[business groups]. It r
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[account-environment-create]]
 == account:environment:create
@@ -77,7 +77,7 @@ If no type is specified, the command creates a sandbox environment.
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[account-environment-delete]]
 == account:environment:delete
@@ -90,7 +90,7 @@ Deletes the environment specified in `<name>` +
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[account-environment-describe]]
 == account:environment:describe
@@ -104,8 +104,7 @@ If no `<name>` is provided, this command returns information about the current s
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[account-environment-list]]
 == account:environment:list
@@ -117,7 +116,7 @@ Lists all your environments in Anypoint Platform. It returns your environment na
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[account-user-describe]]
@@ -131,7 +130,6 @@ Returns your account information, including your username, your full name, your 
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 // end::commands[]

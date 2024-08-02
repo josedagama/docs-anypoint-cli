@@ -41,7 +41,7 @@ Adds a range of IP addresses specified in `<cidrBlock>` to the allowlist of the 
 [NOTE]
 The allowlist works at the load balancer level, not at the CN certificate level. Make sure you only pass IP addresses formatted in https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv4_CIDR_blocks[CIDR notation].
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-allowlist-remove]]
 == cloudhub:load-balancer:allowlist:remove
@@ -54,7 +54,7 @@ Removes an IP or range of IPs addresses specified in `<cidrBlock>` to the allowl
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-create]]
 == cloudhub:load-balancer:create
@@ -83,7 +83,7 @@ By default, your load balancer listens external requests on HTTPS and communicat
 If you configured your Mule application within the Anypoint VPC to listen on HTTPS, make sure you set `upstreamProtocol` to HTTPS when creating the mapping list using the <<cloudhub-load-balancer-mappings-add,load-balancer mappings add>> command.
 --
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,40a"]
 |===
@@ -114,7 +114,7 @@ Deletes the load balancer specified in `<name>`.
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-describe]]
 == cloudhub:load-balancer:describe
@@ -128,7 +128,7 @@ It displays load balancer's name, domain, its state and the Anypoint VPC Id to w
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`. 
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-dynamic-ips-disable]]
 == cloudhub:load-balancer:dynamic-ips:disable
@@ -138,7 +138,7 @@ This command also accepts the default flag `--help`.
 ----
 Disables dynamic IPs for the load balancer specified in `<name>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-dynamic-ips-enable]]
 == cloudhub:load-balancer:dynamic-ips:enable
@@ -148,7 +148,7 @@ This command accepts the default flag `--help`.
 ----
 Enables dynamic IPs for the load balancer specified in `<name>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[cloudhub-load-balancer-list]]
@@ -162,7 +162,7 @@ It displays load balancer's name, domain, its state, and the Anypoint VPC ID to 
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-mappings-add]]
 == cloudhub:load-balancer:mappings:add
@@ -209,7 +209,7 @@ If no `certificateName` is passed, Anypoint Platform CLI returns the mappings fo
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-mappings-remove]]
 == cloudhub:load-balancer:mappings:remove
@@ -220,7 +220,7 @@ This command also accepts the default flag `--help`.
 Removes the proxy mapping rules from the load balancer specified in `<name>` at the priority index specified in `<index>` and the CN specified as the `certificateName` flag +
 If no `certificateName` is passed, Anypoint Platform CLI removes the mappings for the default SSL endpoint.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-ssl-endpoint-add]]
 == cloudhub:load-balancer:ssl-endpoint:add
@@ -243,7 +243,7 @@ Your private key file needs to be passphraseless. | `/Users/mule/Documents/priva
 [NOTE]
 CloudHub does not implement the Online Certificate Status Protocol (OCSP). To keep your certification revocation list up to date, it's recommended to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/cloudhub-api/[CloudHub API] to update your certificates programmatically.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -267,7 +267,7 @@ Shows information about the configuration of the load balancer passed in `<name>
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-ssl-endpoint-remove]]
 == cloudhub:load-balancer:ssl-endpoint:remove
@@ -280,7 +280,7 @@ Removes the ssl certificate specified in `<certificateName>` from the load balan
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-ssl-endpoint-set-default]]
 == cloudhub:load-balancer:ssl-endpoint:set-default
@@ -290,8 +290,7 @@ This command accepts the default flag `--help`.
 ----
 Sets the certificate specified in `<certificateName>` as the default  certificate for the load balancer passed in `<name>`
 
-In addition to the default flag `--help`, this command accepts the following flags:
-
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -318,7 +317,7 @@ In addition to the default flag `--help`, this command accepts the following fla
 ----
 Starts the load balancer specified in `<name>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-load-balancer-stop]]
 == cloudhub:load-balancer:stop
@@ -328,7 +327,7 @@ This command accepts the default flag `--help`.
 ----
 Stops the load balancer specified in `<name>`
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 // end::commands[]
