@@ -27,8 +27,7 @@
 Adds a dedicated load balancer configuration specified by `<dlbUrl>` to Anypoint DataGraph +
 The `dlbUrl` is a valid URL that includes the DLB domain and the mapping rule `inputUri`.
 
-
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[datagraph-load-balancer-config-describe]]
 == datagraph:load-balancer-config:describe
@@ -40,7 +39,7 @@ This command accepts the default flag `--help`.
 
 Displays a dedicated load balancer URL for Anypoint DataGraph
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[datagraph-load-balancer-config-remove]]
 == datagraph:load-balancer-config:remove
@@ -52,6 +51,6 @@ This command accepts the default flag `--help`.
 
 Removes a dedicated load balancer configuration from Anypoint DataGraph.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 // end::commands[]

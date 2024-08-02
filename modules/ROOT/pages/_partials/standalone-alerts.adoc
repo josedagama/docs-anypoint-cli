@@ -27,7 +27,7 @@
 Creates a new alert for a standalone runtime with the ID passed in `name`.
 The alert `name` is limited to 256 characters.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30,40,30"]
 |===
@@ -61,7 +61,7 @@ Describes the alert passed in `alertId`.
 
 This command accepts the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-standalone-alert-list]]
 == runtime-mgr:standalone-alert:list
@@ -74,7 +74,7 @@ Lists all alerts for standalone Mules in the current environment.
 
 This command accepts the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-standalone-alert-modify]]
 == runtime-mgr:standalone-alert:modify
@@ -85,7 +85,7 @@ This command also accepts the default flag `--help`.
 
 Modifies the alert passed in `alertId`.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30,40,30"]
 |===
