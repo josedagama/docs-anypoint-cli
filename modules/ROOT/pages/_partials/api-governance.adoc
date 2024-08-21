@@ -30,7 +30,7 @@
 
 Evaluates specified filters to determine the rulesets that would be applied to your APIs that meet that criteria.  
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -42,7 +42,7 @@ Besides the default flags, this command also accepts:
 
 Available filters include:
 
-* `scope`: API type, `http-api`, `rest-api` or `async-api` 
+* `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `env-type`: Environment type of any, production, or sandbox
@@ -88,7 +88,7 @@ where `order-api-1.0.0-raml.zip` contains an API and its `exchange.json` file
 
 Inspects the API specification passed in `api-specification` and lists all its schemas, such as headers, requests, and response payloads. You can use this schema information in the `governance:ruleset:init` command. See <<governance-ruleset-init>>.
 
-This command accepts only the default flags.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 *Example command:*
 
@@ -168,7 +168,7 @@ You can specify rulesets against which to validate as follows:
 
 NOTE: Duplicate rulesets are not detected, so if you use more than one of the preceding ways of identifying rulesets in the same command execution, some rulesets might be validated multiple times.
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -263,7 +263,7 @@ Location: file:///Users/myuser/Downloads/order-api-1.0.0-raml/order-api-1.0.0-ra
 
 Creates the documentation for the API Governance ruleset definition ZIP file specified in `ruleset`. It puts the documentation in the `doc-file` ZIP file for you to upload and publish to Exchange. 
 
-This command accepts only the default flags.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 *Example command:*
 
@@ -308,7 +308,7 @@ You must include `ruleset-asset-identifiers`, a comma-separated list of ruleset 
 
 You can use one of the `notify` flags to configure notifications for the profile you are creating. If you do not use a `notify` flag, no notifications are configured by the command. Notifications are off by default.
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -318,7 +318,7 @@ Besides the default flags, this command also accepts:
 
 Available filters include:
 
-* `scope`: API type, `http-api`, `rest-api` or `async-api` 
+* `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `env-type`: Environment type of any, production, or sandbox
@@ -379,7 +379,7 @@ anypoint-cli-v4 governance:profile:create "Primary API Standards" 68ef9520-24e9-
 
 Deletes a specific governance profile specified by `profile-id`. To get this ID, run the `governance:profile:info` or `governance:profile:list` command.
 
-The `governance:profile:delete` command accepts only the default flags.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 *Example command:*
 
@@ -405,7 +405,7 @@ anypoint-cli-v4 governance:profile:delete 8ffd463f-86b2-4132-afc6-44d179209362
 
 Lists all information for a governance profile ID
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -446,7 +446,7 @@ NotificationConfig  Contact,Publisher
 
 Lists information for all governance profiles for an organization. You need this information when updating a governance profile.
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -488,7 +488,7 @@ Updates the governance profile specified in `profile-id`. To get this ID, run th
 You can update the governance profile's
 general information, rulesets, filter criteria, and notification configuration. You can use one of the `notify` flags to update the notification configuration or turn off notifications. Any changes override existing notification configurations. If you do not use a `notify` flag, no changes are made to the notification configuration. 
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -506,7 +506,7 @@ See <<exchange-asset-identifiers>>.
 
 Available filters include:
 
-* `scope`: API type, `http-api`, `rest-api` or `async-api` 
+* `scope`: API type, `rest-api` or `async-api` 
 * `tag`: Tag defined for APIs in Exchange
 * `category`: Category defined for APIs in Exchange, where the filter value is specified in two parts as `categoryName:value`
 * `env-type`: Environment type of any, production, or sandbox
@@ -573,7 +573,7 @@ The `new description` parameter gives the description for the new ruleset.
 
 TIP: Run the `governance:ruleset:info` command before running this command to get the rule ID information to use in this command.
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -620,7 +620,7 @@ Lists the ruleset rules in the ruleset definition passed in the `governance-rule
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use "-- " (two dashes followed by a space) before the parameter.
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -694,7 +694,7 @@ Ruleset conforms with Dialect
 
 Initializes a ruleset based on the data schema passed in the `schema` parameter. 
 
-Besides the default flags, this command also accepts:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="35a,65a"]
 |===
@@ -729,7 +729,7 @@ Validates the ruleset definitions passed using the `governance-ruleset` paramete
 * A ZIP file that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
 * A folder that contains an API project with an `exchange.json` file that specifies the ruleset as the main file
 
-This command accepts only the default flags.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 *Example commands:*
 

@@ -14,8 +14,7 @@ The default host, environment, and organization are used if you do not specify t
 Pass Anypoint CLI credentials by using the following methods:
 
 * <<credentials-file,Using a credentials configuration file>>
-* <<command-line-parameters,Using command-line parameters>>
-* <<env-variables,Using environment variables>>
+* <<command-line-parameters,Using command-line parameters and Environment Variables>>
 
 Configuration settings are overridden as follows:
 

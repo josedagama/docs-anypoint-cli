@@ -33,9 +33,7 @@ Deletes the running application specified in `<appID>`. To get this ID, run the 
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts only the default flag `--help`.
-
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[runtime-mgr-application-describe]]
@@ -48,7 +46,7 @@ Displays information about the application specified in `<appID>`. To get this I
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[runtime-mgr-application-deploy]]
@@ -73,8 +71,7 @@ You can get this ID directly from Runtime Manager.  | `--deploymentTargetId clou
 |===
 
 
-Besides the default `--help` flag this command also takes:
-
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -132,7 +129,7 @@ To get the `<appID>`, run the `runtime-mgr application list` command.
 
 To get the `<specID>` run the `runtime-mgr application describe` command.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-application-list]]
 == runtime-mgr:application:list
@@ -144,7 +141,7 @@ Lists all applications in your organization.
 
 This command has the `--output` flag. Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[runtime-mgr-application-modify]]
@@ -156,7 +153,7 @@ This command accepts the default flag `--help`.
 Updates the settings of an existing application specified in `<appID>`.
 To get the `<appID>`, run the `runtime-mgr application list` command.
 
-Besides the default `--help` flag, this command also takes:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="12a,53a,35a"]
 |===
@@ -209,7 +206,7 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 ----
 Starts running the application specified in `<appid>`. To get this ID, run the `runtime-mgr application list` command.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-application-stop]]
 == runtime-mgr:application:stop
@@ -219,7 +216,7 @@ This command accepts only the default flag `--help`.
 ----
 Stops running the application specified in `<appID>`. To get this ID, run the `runtime-mgr application list` command.
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-application-logs]]
 == runtime-mgr:application:logs
@@ -233,7 +230,6 @@ To get the `<appID>`, run the `runtime-mgr application list` command.
 
 To get the `<specID>`, run the `runtime-mgr application describe` command.
 
-
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 // end::commands[]

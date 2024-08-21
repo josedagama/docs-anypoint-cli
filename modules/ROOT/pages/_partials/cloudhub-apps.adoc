@@ -42,7 +42,7 @@ Describes the history of the alarm passed in `<name>`
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-alert-list]]
 == runtime-mgr:cloudhub-alert:list
@@ -54,7 +54,7 @@ Lists all alerts associated with your current environment
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-application-copy]]
 == runtime-mgr:cloudhub-application:copy
@@ -82,7 +82,7 @@ If the Anypoint Platform CLI is using the QA environment in the Services organiz
 [NOTE]
 Running this command requires your user to have read/write access to the `/tmp` directory of the OS where CLI is installed.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,50a"]
 |===
@@ -111,7 +111,7 @@ Deletes the running application you specify in `<name>`
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[deploy-to-cloudhub]]
 == runtime-mgr:cloudhub-application:deploy
@@ -127,7 +127,7 @@ You will have to provide the absolute or relative path to the deployable ZIP fil
 If successful, this command's output includes the deployment status of `UNDEPLOYED`,
 which indicates that CloudHub uploaded the application successfully.
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -196,7 +196,7 @@ The command returns data such as the application's domain, its status, the last 
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-application-download-logs]]
 == runtime-mgr:cloudhub-application:download-logs
@@ -207,6 +207,8 @@ This command also accepts the default flag `--help`.
 Downloads logs the for application specified in `<name>` to the specified directory
 
 Contrarily to what you see in the UI, the logs you download from the CLI won't separate system logs from worker logs.
+
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-application-list]]
 == runtime-mgr:cloudhub-application:list
@@ -220,7 +222,7 @@ It returns your application name, its status, the number of vCores assigned and 
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 [[runtime-mgr-cloudhub-application-modify]]
@@ -238,6 +240,8 @@ This command's output includes `Status`, which is the application's previous dep
 
 NOTE: This command has multi-option flags. When using multi-option flags in a command, either put the parameter before the flags or use a `-- ` (two dashes followed by a space) before the parameter.
 
+This command accepts the xref:index.adoc#default-options[default flags].
+
 [[runtime-mgr-cloudhub-application-restart]]
 == runtime-mgr:cloudhub-application:restart
 
@@ -247,7 +251,7 @@ NOTE: This command has multi-option flags. When using multi-option flags in a co
 
 Restarts the running application you specify in `<name>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-application-start]]
 == runtime-mgr:cloudhub-application:start
@@ -258,7 +262,7 @@ This command accepts the default flag `--help`.
 
 Starts the running application you specify in `<name>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-application-stop]]
 == runtime-mgr:cloudhub-application:stop
@@ -269,7 +273,7 @@ This command accepts the default flag `--help`.
 
 Stops the running application you specify in `<name>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[runtime-mgr-cloudhub-application-tail-logs]]
 == runtime-mgr:cloudhub-application:tail-logs
@@ -280,7 +284,7 @@ This command accepts the default flag `--help`.
 
 Tails application logs
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-region-list]]
 == cloudhub:region:list
@@ -293,7 +297,7 @@ Lists all supported regions
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-runtime-list]]
 == cloudhub:runtime:list
@@ -304,7 +308,7 @@ This command also accepts the default flag `--help`.
 
 Lists all supported runtimes
 
-This command accepts only the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 

@@ -35,7 +35,7 @@
 ----
 Assigns the Anypoint VPC defined in `<vpc>` to the business group(s) passed as argument(s) thereafter
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-business-groups-remove]]
 == cloudhub:vpc:business-groups:remove
@@ -48,7 +48,7 @@ Removes the Anypoint VPC defined in `<vpc>` from the business group(s) passed as
 [WARNING]
 This command does not prompt twice before removing the Anypoint VPC from the specified resource. If you send a remove instruction, it does not ask for confirmation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-create]]
 == cloudhub:vpc:create
@@ -65,8 +65,7 @@ This command accepts  the `--default` flag. When passed, the Anypoint VPC is cre
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-delete]]
 == cloudhub:vpc:delete
@@ -79,7 +78,7 @@ Deletes the Anypoint VPC specified in `<name>`
 [WARNING]
 This command does not prompt twice before deleting. If you send a delete instruction, it does not ask for confirmation.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-describe]]
 == cloudhub:vpc:describe
@@ -91,7 +90,7 @@ Displays information about the Anypoint VPC that is specified in `<name>`
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-dns-servers-set]]
 == cloudhub:vpc:dns-servers:set
@@ -106,7 +105,7 @@ Whenever those private domains are provided, your worker resolves them using you
 This feature is supported by workers running Mule versions 3.5.x, 3.6.x, 3.7.4, 3.8.0-HF1, 3.8.1 and 3.8.2.
 
 
-In addition to the default flag `--help`, this command accepts the following flags:
+In addition to the the xref:index.adoc#default-options[default flags], this command accepts the following flags:
 
 [%header,cols="30a,40a,30a"]
 |===
@@ -128,7 +127,7 @@ To remove a DNS set, you need to use the <<cloudhub-vpc-dns-servers-unset,vpc dn
 ----
 Clears the list of local host names (internal domain names) to be resolved using your DNS servers from the Anypoint VPC passed in `<vpc>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-environments-add]]
 == cloudhub:vpc:environments:add
@@ -139,7 +138,7 @@ This command accepts the default flag `--help`.
 Assigns the Anypoint VPC defined in `<vpc>` to the environment(s) passed as argument(s) thereafter 
 The `--default` flag allows setting an Anypoint VPC as the default for the organization, which applies to all environments which don't have an Anypoint VPC explicitly associated.
 
-This command also accepts the default `--help` flag.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-environments-remove]]
 == cloudhub:vpc:environments:remove
@@ -151,8 +150,7 @@ Removes the Anypoint VPC defined in `<vpc>` from the environment(s) passed as ar
 
 This command accepts the `--default` flag, that removes this Anypoint VPC as the default Anypoint VPC for the environment.
 
-This command also accepts the default `--help` flag.
-
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-firewall-rules-add]]
 == cloudhub:vpc:firewall-rules:add
@@ -179,7 +177,7 @@ When creating an Anypoint VPC, make sure to allow your outbound address. +
 By default, all IP addresses are blocked, and you need to authorize IP addresses or range of addresses to your Anypoint VPC firewall rule.
 --
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-firewall-rules-describe]]
 == cloudhub:vpc:firewall-rules:describe
@@ -191,7 +189,7 @@ Describes all the firewall rules for the Anypoint VPC defined in `<vpc>`
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-firewall-rules-remove]]
 == cloudhub:vpc:firewall-rules:remove
@@ -201,7 +199,7 @@ This command also accepts the default flag `--help`.
 ----
 Removes the firewall rule from the workers inside the Anypoint VPC specified in `<vpc>` at the index passed in the `<index>`
 
-This command accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 [[cloudhub-vpc-list]]
 == cloudhub:vpc:list
@@ -214,7 +212,7 @@ It returns ID, region, and environment of the network and whether it is the defa
 
 Use the `--output` flag to specify the response format. Supported values are `table` (default) and `json`.
 
-This command also accepts the default flag `--help`.
+This command accepts the xref:index.adoc#default-options[default flags].
 
 
 
